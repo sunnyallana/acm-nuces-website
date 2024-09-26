@@ -78,9 +78,6 @@ const NavBarComponent = () => {
       <MenuItem setActive={setActive} active={active} item="Home">
         <HoveredLink to="/">Go to Home</HoveredLink>
       </MenuItem>
-      <MenuItem setActive={setActive} active={active} item="About Us">
-        <HoveredLink to="/about-us">Learn More</HoveredLink>
-      </MenuItem>
       <MenuItem setActive={setActive} active={active} item="Past Events">
         <HoveredLink to="/past-events">View Past Events</HoveredLink>
       </MenuItem>
