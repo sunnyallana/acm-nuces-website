@@ -18,7 +18,7 @@ const MenuItem = ({ setActive, active, item, children }) => {
       <HoveredLink to={children.props.to}>
         <motion.p
           transition={{ duration: 0.3 }}
-          className="cursor-pointer text-black hover:opacity-[0.9] dark:text-white"
+          className="cursor-pointer text-black hover:opacity-[0.9]" // Black text for hover and active
         >
           {item}
         </motion.p>
@@ -34,7 +34,7 @@ const MenuItem = ({ setActive, active, item, children }) => {
               <motion.div
                 transition={transition}
                 layoutId="active"
-                className="bg-white dark:bg-black backdrop-blur-sm rounded-2xl overflow-hidden border border-black/[0.2] dark:border-white/[0.2] shadow-xl"
+                className="bg-white backdrop-blur-sm rounded-2xl overflow-hidden border border-black/[0.2] shadow-xl" // White background and black border
               >
                 <motion.div layout className="w-max h-full p-4">
                   {children}
@@ -52,7 +52,7 @@ const Menu = ({ setActive, children }) => {
   return (
     <nav
       onMouseLeave={() => setActive(null)}
-      className="relative rounded-full border border-transparent dark:bg-black dark:border-white/[0.2] bg-white shadow-input flex justify-center space-x-4 px-8 py-6"
+      className="relative rounded-full border border-transparent bg-white shadow-input flex justify-center space-x-4 px-8 py-6" // White background for menu
     >
       {children}
     </nav>
@@ -63,7 +63,7 @@ const HoveredLink = ({ children, ...rest }) => {
   return (
     <Link
       {...rest}
-      className="text-neutral-700 dark:text-neutral-200 hover:text-black"
+      className="text-black hover:text-gray-700" // Black text with darker gray on hover
     >
       {children}
     </Link>

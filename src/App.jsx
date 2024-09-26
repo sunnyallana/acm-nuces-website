@@ -9,17 +9,21 @@ import FooterComponent from "./components/FooterComponent";
 
 function App() {
   return (
-    <Router>
-      <NavBarComponent /> 
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about-us" element={<AboutUs />} />
-        <Route path="/past-events" element={<PastEvents />} />
-        <Route path="/our-team" element={<OurTeam />} />
-        <Route path="/contact-us" element={<ContactUs />} />
-      </Routes>
-      <FooterComponent />
-    </Router>
+    <div className="bg-white min-h-screen flex flex-col">
+      <Router>
+        <NavBarComponent />
+        <div className="flex-grow"> {/* Ensures the main content takes up remaining space */}
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about-us" element={<AboutUs />} />
+            <Route path="/past-events" element={<PastEvents />} />
+            <Route path="/our-team" element={<OurTeam />} />
+            <Route path="/contact-us" element={<ContactUs />} />
+          </Routes>
+        </div>
+        <FooterComponent />
+      </Router>
+    </div>
   );
 }
 
