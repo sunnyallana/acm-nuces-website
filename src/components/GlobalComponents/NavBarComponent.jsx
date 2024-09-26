@@ -18,7 +18,7 @@ const MenuItem = ({ setActive, active, item, children }) => {
       <HoveredLink to={children.props.to}>
         <motion.p
           transition={{ duration: 0.3 }}
-          className="cursor-pointer text-black hover:opacity-[0.9] truncate text-sm md:text-base" // Small text on mobile, normal on larger screens
+          className="cursor-pointer text-white hover:opacity-[0.9] truncate text-sm md:text-base" // Text color set to white
         >
           {item}
         </motion.p>
@@ -52,7 +52,7 @@ const Menu = ({ setActive, children }) => {
   return (
     <nav
       onMouseLeave={() => setActive(null)}
-      className="relative rounded-full border border-transparent bg-white shadow-input flex justify-center space-x-4 px-8 py-6"
+      className="relative rounded-full border border-transparent bg-black shadow-input flex justify-center space-x-4 px-8 py-6 z-50"
     >
       {children}
     </nav>
@@ -63,7 +63,7 @@ const HoveredLink = ({ children, ...rest }) => {
   return (
     <Link
       {...rest}
-      className="text-black hover:text-gray-700 truncate text-sm md:text-base" // Adjusted text size based on screen
+      className="text-gray-700 hover:text-black truncate text-sm md:text-base" // Keep text white with hover effect
     >
       {children}
     </Link>

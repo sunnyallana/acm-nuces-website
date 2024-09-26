@@ -3,8 +3,8 @@ import { Home } from "./pages/Home";
 import { PastEvents } from "./pages/PastEvents";
 import { OurTeam } from "./pages/OurTeam";
 import { ContactUs } from "./pages/ContactUs";
-import NavBarComponent from "./components/NavBarComponent";
-import FooterComponent from "./components/FooterComponent";
+import NavBarComponent from "./components/GlobalComponents/NavBarComponent";
+import FooterComponent from "./components/GlobalComponents/FooterComponent";
 
 function App() {
   return (
