@@ -2,7 +2,7 @@ import React from "react";
 import Logo from "../assets/acm.svg";
 import { FaInstagram, FaLinkedin, FaFacebook } from "react-icons/fa";
 
-const Footer = () => {
+const FooterComponent = () => {
   return (
     <div className="bg-white">
       <footer>
@@ -130,4 +130,4 @@ const Footer = () => {
   );
 };
 
-export default Footer;
+export default FooterComponent;
