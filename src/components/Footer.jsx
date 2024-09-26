@@ -53,6 +53,34 @@ const Footer = () => {
                 </ul>
               </div>
 
+              <div>
+                <h2 className="mb-6 text-lg font-bold text-[#031e2c] uppercase">
+                  Meet the Developers
+                </h2>
+                <ul className="text-gray-600 font-medium text-lg">
+                  <li className="mb-4">
+                    <a
+                      href="https://www.linkedin.com/in/owais-rafiq-639494253/"
+                      className="hover:underline text-gray-600"
+                    >
+                      Owais Rafiq
+                    </a>
+                  </li>
+                  {/* Additional Events can be added here */}
+                </ul>
+                <ul className="text-gray-600 font-medium text-lg">
+                  <li className="mb-4">
+                    <a
+                      href="https://www.linkedin.com/in/sunnyallana/"
+                      className="hover:underline text-gray-600"
+                    >
+                      Sunny Shaban Ali
+                    </a>
+                  </li>
+                  {/* Additional Events can be added here */}
+                </ul>
+              </div>
+
               {/* Connect with Us */}
               <div>
                 <h2 className="text-lg font-bold text-[#031e2c] uppercase ml-6">
