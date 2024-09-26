@@ -23,7 +23,7 @@ const FooterComponent = () => {
               </a>
             </div>
             {/* Events and Social Links Section */}
-            <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3 mt-9">
+            <div className="grid grid-cols-2 gap-5 sm:gap-6 sm:grid-cols-3 mt-9 mr-9">
               {/* Our Events */}
               <div>
                 <h2 className="mb-6 text-lg font-bold text-[#031e2c] uppercase">
@@ -83,25 +83,25 @@ const FooterComponent = () => {
 
               {/* Connect with Us */}
               <div>
-                <h2 className="text-lg font-bold text-[#031e2c] uppercase ml-6">
+                <h2 className="text-lg font-bold text-[#031e2c] uppercase sm:ml-4">
                   Connect with Us
                 </h2>
-                <div className="flex flex-wrap m-4">
+                <div className="flex flex-wrap mt-4 items-left justify-left">
                   <a
                     href="https://www.instagram.com/acmnuceskhi/"
-                    className="text-[#031e2c] mx-1 lg:mx-4 text-2xl"
+                    className="text-[#031e2c] mx-1 lg:mx-4 text-xl sm:text-2xl"
                   >
                     <FaInstagram />
                   </a>
                   <a
                     href="https://www.linkedin.com/company/acmnuceskhi"
-                    className="text-[#031e2c] mx-1 lg:mx-4 text-2xl"
+                    className="text-[#031e2c] mx-1 lg:mx-4 text-xl sm:text-2xl"
                   >
                     <FaLinkedin />
                   </a>
                   <a
                     href="https://www.facebook.com/acmnuces/"
-                    className="text-[#031e2c] mx-1 lg:mx-4 text-2xl"
+                    className="text-[#031e2c] mx-1 lg:mx-4 text-xl sm:text-2xl"
                   >
                     <FaFacebook />
                   </a>
