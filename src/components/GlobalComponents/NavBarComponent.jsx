@@ -160,7 +160,9 @@ const NavBarComponent = () => {
 
   return (
     <Container>
-      <Button clicked={click} onClick={handleClick}></Button>
+      <Button clicked={click} onClick={() => handleClick()}>
+        Click
+      </Button>
       <SidebarContainer>
         <Logo>
           <img src={logo} alt="logo" />

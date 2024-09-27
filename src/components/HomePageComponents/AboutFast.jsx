@@ -6,7 +6,7 @@ const AboutFast = () => {
   return (
     <div>
         {/* 1st hero-section */}
-        <div className="inline-block lg:flex lg:justify-between lg:items-center mt-2 m-4 ml-20 sm:mx-14">
+        <div className="inline-block lg:flex lg:justify-between lg:items-center mt-2 m-4">
         <div>
         <img src={Logo} alt="Image" className="mx-auto lg:flex" />
         </div>

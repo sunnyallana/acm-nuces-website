@@ -29,7 +29,7 @@ const cardData = [
 
 export function CardSection() {
   return (
-    <section className="bg-white py-12 ml-14">
+    <section className="bg-white py-12">
       <h1 className="text-black text-left text-7xl font-extrabold mb-8 pl-8">
         Key Facts
       </h1>
