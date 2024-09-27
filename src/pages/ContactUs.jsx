@@ -19,7 +19,7 @@ import EmailIcon from '@mui/icons-material/Email';
 const theme = createTheme({
   palette: {
     primary: {
-      main: '#006b82',
+      main: '#006b82', // Retaining original color theme
     },
   },
 });
@@ -58,7 +58,7 @@ export default function ContactUs() {
                 referrerPolicy="no-referrer-when-downgrade"
               ></iframe>
             </Box>
-            <Card variant="outlined">
+            <Card variant="outlined" sx={{ borderRadius: 2, boxShadow: 3, transition: 'transform 0.3s', '&:hover': { transform: 'scale(1.015)', boxShadow: 6 } }}>
               <CardHeader
                 title="Location Details"
                 sx={{ bgcolor: 'primary.main', color: 'white' }}
@@ -82,37 +82,37 @@ export default function ContactUs() {
             </Card>
           </Grid>
           <Grid item xs={12} md={6}>
-            <Card variant="outlined" sx={{ mb: 4 }}>
+            <Card variant="outlined" sx={{ mb: 4, borderRadius: 2, boxShadow: 3, transition: 'transform 0.3s', '&:hover': { transform: 'scale(1.015)', boxShadow: 6 } }}>
               <CardHeader
                 title="ACM NUCES President"
                 sx={{ bgcolor: 'primary.main', color: 'white' }}
               />
               <CardContent>
-                <Typography variant="body1" gutterBottom><strong>Name:</strong> Hassaan Gatta</Typography>
+                <Typography variant="body1" gutterBottom><strong>Name:</strong> Hassaan</Typography>
                 <Box display="flex" alignItems="center" mb={2}>
                   <PhoneIcon color="primary" sx={{ mr: 1 }} />
                   <Typography variant="body1">+92 300 1234567</Typography>
                 </Box>
                 <Box display="flex" alignItems="center">
                   <EmailIcon color="primary" sx={{ mr: 1 }} />
-                  <Typography variant="body1">hassaan.gatta@acmnuces.com</Typography>
+                  <Typography variant="body1">Hassaan</Typography>
                 </Box>
               </CardContent>
             </Card>
-            <Card variant="outlined">
+            <Card variant="outlined" sx={{ borderRadius: 2, boxShadow: 3, transition: 'transform 0.3s', '&:hover': { transform: 'scale(1.015)', boxShadow: 6 } }}>
               <CardHeader
                 title="ACM NUCES Vice President"
                 sx={{ bgcolor: 'primary.main', color: 'white' }}
               />
               <CardContent>
-                <Typography variant="body1" gutterBottom><strong>Name:</strong> Rahim Khan</Typography>
+                <Typography variant="body1" gutterBottom><strong>Name:</strong> Rahim</Typography>
                 <Box display="flex" alignItems="center" mb={2}>
                   <PhoneIcon color="primary" sx={{ mr: 1 }} />
                   <Typography variant="body1">+92 300 7654321</Typography>
                 </Box>
                 <Box display="flex" alignItems="center">
                   <EmailIcon color="primary" sx={{ mr: 1 }} />
-                  <Typography variant="body1">rahim.khan@acmnuces.com</Typography>
+                  <Typography variant="body1">Rahim</Typography>
                 </Box>
               </CardContent>
             </Card>
