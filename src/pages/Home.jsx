@@ -4,14 +4,16 @@ import HeroSectionComponent from '../components/HomePageComponents/HeroSectionCo
 import { CardSection } from '../components/HomePageComponents/CardSection';
 import {Mission} from '../components/HomePageComponents/Mission';
 import AboutACM from '../components/HomePageComponents/AboutACM';
-export function Home() {
+import { AchievementSection } from '../components/HomePageComponents/AchievementSection';
 
+export function Home() {
   return (
     <div>
       <HeroSectionComponent />
       <CardSection/>
       <Mission/>
       <AboutACM/>
+      <AchievementSection/>
     </div>
   );
 }

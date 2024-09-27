@@ -2,6 +2,8 @@ import { cn } from "../../lib/utils";
 import React from 'react';
 
 export function CardDemo({ name, description, bgImage, afterBgImage }) {
+
+  
   return (
     <div className="max-w-xs w-full">
       <div
