@@ -1,4 +1,3 @@
-import React from 'react';
 import { CardDemo } from './KeyCards'; // Ensure correct path
 
 const cardData = [

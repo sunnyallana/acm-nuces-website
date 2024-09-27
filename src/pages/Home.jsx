@@ -2,6 +2,7 @@ import React from 'react';
 import { CardDemo } from '../components/HomePageComponents/KeyCards'; 
 import HeroSectionComponent from '../components/HomePageComponents/HeroSectionComponent';
 import { CardSection } from '../components/HomePageComponents/CardSection';
+import {Mission} from '../components/HomePageComponents/Mission';
 
 export function Home() {
 
@@ -9,6 +10,7 @@ export function Home() {
     <div>
       <HeroSectionComponent />
       <CardSection/>
+      <Mission/>
     </div>
   );
 }
