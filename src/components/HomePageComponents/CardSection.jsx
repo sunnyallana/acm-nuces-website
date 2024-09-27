@@ -1,4 +1,5 @@
 import { CardDemo } from './KeyCards'; // Ensure correct path
+import Logo from "../../assets/acm.svg";
 
 const cardData = [
   {
@@ -30,8 +31,8 @@ const cardData = [
 export function CardSection() {
   return (
     <section className="bg-white py-12 ml-14">
-      <h1 className="text-black text-left text-7xl font-extrabold mb-8 pl-8">
-        Key Facts
+      <h1 className="mainh1 font-extrabold text-5xl text-center lg:text-left lg:text-7xl text-[#006984] pl-6">
+        Our Excellence
       </h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 p-8 mx-auto">
         {cardData.map((card, index) => (
