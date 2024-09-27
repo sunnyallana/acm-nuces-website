@@ -5,10 +5,10 @@ const AboutACM = () => {
   return (
     <div>
         {/* 1st hero-section */}
-        <div className="inline-block lg:flex lg:justify-between lg:items-center mt-12">
+        <div className="inline-block lg:flex lg:justify-between lg:items-center mt-12 m-4">
         <div className="w-100 mt-20 ml-0 lg:w-3/4 lg:ml-10 lg:mt-12">
         <h1 className="mainh1 font-extrabold text-5xl text-center lg:text-left lg:text-7xl text-[#006984]">WHAT IS ACM?</h1>
-        <p className="text-gray-700 font-semibold text-md text-left m-5 ml-0 md:text-left lg:text-left lg:text-lg xl:text-lg pt-12">
+        <p className="text-gray-700 font-semibold text-md text-center md:text-left ml-0 md:text-left lg:text-left lg:text-lg xl:text-lg pt-12">
             The ACM Student Chapter at FAST-NUCES Karachi Campus is dedicated to
             the promotion of computing education, research and development.
             <br />

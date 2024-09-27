@@ -1,30 +1,3 @@
-// import { cn } from "../../lib/utils"; 
-
-// export function Mission() {
-//   return (
-//     <div className="max-w-4xl mx-auto py-12">
-//       <div
-//         className={cn(
-//           "group w-full bg-white dark:bg-neutral-900 p-6 rounded-lg shadow-lg",
-//           "hover:shadow-xl transition-shadow duration-500"
-//         )}
-//       >
-//         <h3 className="text-2xl font-bold text-neutral-900 dark:text-white mb-4">
-//           Our Mission
-//         </h3>
-//         <p className="text-lg text-neutral-700 dark:text-neutral-300 mb-4">
-//           ACM NUCES is dedicated to fostering a culture of technological innovation, 
-//           professional development, and academic excellence among students at FAST NUCES University.
-//         </p>
-//         <p className="text-lg text-neutral-700 dark:text-neutral-300">
-//           We aim to bridge the gap between academic learning and industry requirements, 
-//           preparing our members for successful careers in computer science and related fields.
-//         </p>
-//       </div>
-//     </div>
-//   );
-// }
-
 import { useState } from 'react';
 import PropTypes from 'prop-types';
 import { AnimatePresence, motion } from 'framer-motion';
@@ -52,7 +25,7 @@ export function Mission() {
               }}
               exit={{
                 opacity: 0,
-                transition: { duration: 0.3, delay: 0.2 },
+                transition: { duration: 0.3, ease: 'easeInOut', delay: 0.2 },
               }}
             />
           )}
@@ -78,7 +51,7 @@ const Card = ({ children, isHovered }) => {
     <div
       className={cn(
         "rounded-3xl h-full w-full p-8 overflow-hidden bg-[#0b466d] border border-transparent",
-        "transition-all duration-300 ease-in-out",
+        "transition-all duration-500 ease-in-out",  
         isHovered ? "shadow-2xl" : "shadow-lg"
       )}
     >
