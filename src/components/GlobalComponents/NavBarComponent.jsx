@@ -7,14 +7,14 @@ import logo from "../../assets/acm.svg";
 
 const Container = styled.div`
   position: fixed;
-  z-index: 11;
+  z-index: 11; /* Increased z-index */
 `;
 
 const Button = styled.button`
   background-color: var(--black);
   border: none;
-  width: 2.5rem; /* Default width */
-  height: 2.5rem; /* Default height */
+  width: 2.5rem;
+  height: 2.5rem;
   border-radius: 50%;
   margin: 0.5rem 0 0 0.5rem;
   cursor: pointer;
@@ -42,103 +42,73 @@ const Button = styled.button`
     top: ${(props) => (props.clicked ? "1.2" : "1.5rem")};
     transform: ${(props) => (props.clicked ? "rotate(-135deg)" : "rotate(0)")};
   }
-
-  @media (max-width: 768px) {
-    width: 2rem; /* Smaller width for mobile */
-    height: 2rem; /* Smaller height for mobile */
-  }
 `;
 
 const SidebarContainer = styled.div`
-  background-color: #f0f0f0;
-  width: 4rem; /* Default width for larger screens */
+  background-color: #f0f0f0; /* Darker shade of white */
+  width: 4rem; /* Increased width */
   height: 80vh;
   margin-top: 1rem;
   border-radius: 0 30px 30px 0;
-  padding: 0;
+  padding: 0; /* Remove padding to eliminate unwanted spacing */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
   position: relative;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
-
-  @media (max-width: 768px) {
-    width: 3rem; /* Reduced width for mobile */
-  }
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Darkened box shadow */
 `;
 
 const Logo = styled.div`
-  width: 4rem; /* Default width for larger screens */
-  margin-bottom: 1rem;
+  width: 4rem; /* Increased width for the logo */
+  margin-bottom: 1rem; /* Added margin for spacing */
 
   img {
     width: 100%;
-    height: auto;
-    max-height: 4rem; /* Default max height */
-  }
-
-  @media (max-width: 768px) {
-    width: 3rem; /* Smaller width for mobile */
-    margin-bottom: 0.5rem; /* Adjusted margin for mobile */
-    img {
-      max-height: 3rem; /* Reduced max height for mobile */
-    }
+    height: auto; /* Keep aspect ratio */
+    max-height: 4rem; /* Increased maximum height */
   }
 `;
 
 const SlickBar = styled.ul`
-  color: black;
+  color: black; /* Changed text color to black */
   list-style: none;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #f0f0f0;
-  padding: 0;
-  margin: 0;
+  background-color: #f0f0f0; /* Changed background to match sidebar */
+  padding: 0; /* Remove padding */
+  margin: 0; /* Remove margin */
   position: absolute;
-  top: 6rem;
+  top: 6rem; /* Ensure this doesn't cause unwanted spacing */
   left: 0;
-  width: 4rem; /* Default width for larger screens */
+  width: ${(props) => (props.clicked ? "12rem" : "4rem")}; /* Adjusted width */
   transition: all 0.5s ease;
   border-radius: 0 30px 30px 0;
-
-  @media (max-width: 768px) {
-    width: 3rem; /* Reduced width for mobile */
-  }
 `;
 
 const Item = styled(NavLink)`
   text-decoration: none;
-  color: black;
+  color: black; /* Changed link color to black */
   width: 100%;
-  padding: 1rem 0; /* Default padding */
+  padding: 1rem 0;
   cursor: pointer;
   display: flex;
-  padding-left: 1rem; /* Default padding-left */
+  padding-left: 1rem;
 
   &:hover {
-    background-color: rgba(0, 0, 255, 0.1);
-    border-right: 4px solid blue;
+    background-color: rgba(0, 0, 255, 0.1); /* Hover effect */
+    border-right: 4px solid blue; /* Blue border on hover */
   }
 
   svg {
-    width: 1.2rem; /* Default icon size */
+    width: 1.2rem;
     height: auto;
-    filter: invert(0%);
+    filter: invert(0%); /* Changed icon color to dark blue */
     transition: filter 0.3s ease;
 
     &:hover {
-      filter: invert(40%) sepia(100%) saturate(1000%) hue-rotate(180deg) brightness(100%) contrast(100%);
-    }
-  }
-
-  @media (max-width: 768px) {
-    padding: 0.75rem 0; /* Reduced padding for mobile */
-    padding-left: 0.5rem; /* Adjusted padding-left for mobile */
-
-    svg {
-      width: 1rem; /* Smaller icon for mobile */
+      filter: invert(40%) sepia(100%) saturate(1000%) hue-rotate(180deg) brightness(100%) contrast(100%); /* Change color on hover */
     }
   }
 `;
@@ -148,10 +118,6 @@ const Text = styled.span`
   overflow: hidden;
   margin-left: ${(props) => (props.clicked ? "1.5rem" : "0")};
   transition: all 0.3s ease;
-
-  @media (max-width: 768px) {
-    margin-left: ${(props) => (props.clicked ? "1rem" : "0")}; /* Adjusted margin for mobile */
-  }
 `;
 
 const NavBarComponent = () => {
@@ -160,9 +126,7 @@ const NavBarComponent = () => {
 
   return (
     <Container>
-      <Button clicked={click} onClick={() => handleClick()}>
-        Click
-      </Button>
+      <Button clicked={click} onClick={handleClick}></Button>
       <SidebarContainer>
         <Logo>
           <img src={logo} alt="logo" />
