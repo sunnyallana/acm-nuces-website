@@ -22,8 +22,8 @@ const sponsorLogos = [
 const Sponsor = () => {
   return (
     <div className="w-full py-12 overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="font-extrabold text-xl text-center lg:text-4xl text-[#006984] mb-8">
+      <div className="w-full py-12 overflow-hidden pl-14">
+        <h2 className="font-bold text-3xl text-center lg:text-4xl text-[#006984] mb-8">
           Our Previous Sponsors
         </h2>
         <div className="relative">

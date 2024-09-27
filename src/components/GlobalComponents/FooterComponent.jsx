@@ -6,7 +6,7 @@ const FooterComponent = () => {
   return (
     <div className="bg-white">
       <footer>
-        <div className="mx-auto w-full p-4 py-6 lg:py-8">
+      <div className="mx-auto w-full p-4 py-6 lg:py-8 pl-20">
           <div className="md:flex md:justify-between">
             {/* Logo Section */}
             <div className="mb-6 md:mb-0 ml-9">
