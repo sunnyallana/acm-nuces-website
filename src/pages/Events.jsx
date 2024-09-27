@@ -1,6 +1,6 @@
 import React from 'react';
 
-export function PastEvents() {
+export function Events() {
   return (
     <div>
       <h2>Past Events Page</h2>

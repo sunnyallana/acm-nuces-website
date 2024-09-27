@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Home } from "./pages/Home";
-import { PastEvents } from "./pages/PastEvents";
+import { Events } from "./pages/Events";
 import { OurTeam } from "./pages/OurTeam";
 import { ContactUs } from "./pages/ContactUs";
 import NavBarComponent from "./components/GlobalComponents/NavBarComponent";
@@ -14,7 +14,7 @@ function App() {
         <div className="flex-grow"> {/* Ensures the main content takes up remaining space */}
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/past-events" element={<PastEvents />} />
+            <Route path="/events" element={<Events />} />
             <Route path="/our-team" element={<OurTeam />} />
             <Route path="/contact-us" element={<ContactUs />} />
           </Routes>

@@ -20,7 +20,7 @@ const WavyBackground = ({
       case "slow":
         return 0.001;
       case "fast":
-        return 0.002;
+        return 0.0015;
       default:
         return 0.001;
     }
@@ -42,8 +42,8 @@ const WavyBackground = ({
     };
     render();
   };
-  
-  const waveColors = ["#0b466d", "#257fb5"];
+
+  const waveColors = ["#e5d9cb", "#227ebd"];
 
   const drawWave = (n) => {
     nt += getSpeed();
@@ -52,13 +52,14 @@ const WavyBackground = ({
       ctx.lineWidth = waveWidth || 50;
       ctx.strokeStyle = waveColors[i % waveColors.length];
       for (x = 0; x < w; x += 5) {
-        const y = noise(x / 800, 0.3 * i, nt) * 100;
+        const y = noise(x / 800, 0.3 * i, nt) * 150; // Changed from 100 to 150
         ctx.lineTo(x, y + h * 0.5);
       }
       ctx.stroke();
       ctx.closePath();
     }
   };
+  
 
   let animationId;
   const render = () => {
@@ -81,7 +82,7 @@ const WavyBackground = ({
       <canvas
         className="absolute top-0 left-0 z-0 w-full h-full"
         ref={canvasRef}
-        style={{ display: 'block' }} // Prevents canvas from causing overflow
+        style={{ display: 'block' }}
       />
       <div className={`relative z-10 ${className}`} {...props}>
         {children}
