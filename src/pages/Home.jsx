@@ -6,7 +6,7 @@ import {Mission} from '../components/HomePageComponents/Mission';
 import AboutACM from '../components/HomePageComponents/AboutACM';
 import AboutFast from '../components/HomePageComponents/AboutFast';
 import Sponsor from '../components/HomePageComponents/Sponsor';
-// import { AchievementSection } from '../components/HomePageComponents/AchievementSection';
+import { AchievementSection } from '../components/HomePageComponents/AchievementSection';
 
 export function Home() {
   return (
@@ -16,7 +16,7 @@ export function Home() {
       <Mission/>
       <AboutFast/>
       <AboutACM/>
-      {/* <AchievementSection/> */}
+      <AchievementSection/>
       <Sponsor/>
     </div>
   );

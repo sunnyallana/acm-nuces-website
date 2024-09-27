@@ -1,111 +1,159 @@
 import React, { useState } from "react";
-import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
-import PropTypes from 'prop-types';
+import styled from "styled-components";
+import { NavLink } from "react-router-dom";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faHome, faUsers, faCalendarAlt, faFileAlt } from '@fortawesome/free-solid-svg-icons';
+import logo from "../../assets/acm.svg";
 
-const transition = {
-  type: "spring",
-  mass: 0.5,
-  damping: 11.5,
-  stiffness: 100,
-  restDelta: 0.001,
-  restSpeed: 0.001,
-};
+const Container = styled.div`
+  position: fixed;
+  z-index: 11; /* Increased z-index */
+`;
 
-const MenuItem = ({ setActive, active, item, children }) => {
-  return (
-    <div onMouseEnter={() => setActive(item)} className="relative">
-      <HoveredLink to={children.props.to}>
-        <motion.p
-          transition={{ duration: 0.3 }}
-          className="cursor-pointer text-white hover:opacity-[0.9] truncate text-sm md:text-base" // Text color set to white
-        >
-          {item}
-        </motion.p>
-      </HoveredLink>
-      {active !== null && (
-        <motion.div
-          initial={{ opacity: 0, scale: 0.85, y: 10 }}
-          animate={{ opacity: 1, scale: 1, y: 0 }}
-          transition={transition}
-        >
-          {active === item && (
-            <div className="absolute top-[calc(100%_+_1.2rem)] left-1/2 transform -translate-x-1/2 pt-4">
-              <motion.div
-                transition={transition}
-                layoutId="active"
-                className="bg-white backdrop-blur-sm rounded-2xl overflow-hidden border border-black/[0.2] shadow-xl"
-              >
-                <motion.div layout className="w-max h-full p-4">
-                  {children}
-                </motion.div>
-              </motion.div>
-            </div>
-          )}
-        </motion.div>
-      )}
-    </div>
-  );
-};
+const Button = styled.button`
+  background-color: var(--black);
+  border: none;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  margin: 0.5rem 0 0 0.5rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
 
-const Menu = ({ setActive, children }) => {
-  return (
-    <nav
-      onMouseLeave={() => setActive(null)}
-      className="relative rounded-full border border-transparent shadow-input flex justify-center space-x-4 px-8 py-6 z-50"
-    >
-      {children}
-    </nav>
-  );
-};
+  &::before,
+  &::after {
+    content: "";
+    background-color: var(--white);
+    height: 2px;
+    width: 1rem;
+    position: absolute;
+    transition: all 0.3s ease;
+  }
 
-const HoveredLink = ({ children, ...rest }) => {
-  return (
-    <Link
-      {...rest}
-      className="text-gray-700 hover:text-black truncate text-sm md:text-base" // Keep text white with hover effect
-    >
-      {children}
-    </Link>
-  );
-};
+  &::before {
+    top: ${(props) => (props.clicked ? "1.5" : "1rem")};
+    transform: ${(props) => (props.clicked ? "rotate(135deg)" : "rotate(0)")};
+  }
+
+  &::after {
+    top: ${(props) => (props.clicked ? "1.2" : "1.5rem")};
+    transform: ${(props) => (props.clicked ? "rotate(-135deg)" : "rotate(0)")};
+  }
+`;
+
+const SidebarContainer = styled.div`
+  background-color: #f0f0f0; /* Darker shade of white */
+  width: 4rem; /* Increased width */
+  height: 80vh;
+  margin-top: 1rem;
+  border-radius: 0 30px 30px 0;
+  padding: 0; /* Remove padding to eliminate unwanted spacing */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Darkened box shadow */
+`;
+
+const Logo = styled.div`
+  width: 4rem; /* Increased width for the logo */
+  margin-bottom: 1rem; /* Added margin for spacing */
+
+  img {
+    width: 100%;
+    height: auto; /* Keep aspect ratio */
+    max-height: 4rem; /* Increased maximum height */
+  }
+`;
+
+const SlickBar = styled.ul`
+  color: black; /* Changed text color to black */
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f0f0f0; /* Changed background to match sidebar */
+  padding: 0; /* Remove padding */
+  margin: 0; /* Remove margin */
+  position: absolute;
+  top: 6rem; /* Ensure this doesn't cause unwanted spacing */
+  left: 0;
+  width: ${(props) => (props.clicked ? "12rem" : "4rem")}; /* Adjusted width */
+  transition: all 0.5s ease;
+  border-radius: 0 30px 30px 0;
+`;
+
+const Item = styled(NavLink)`
+  text-decoration: none;
+  color: black; /* Changed link color to black */
+  width: 100%;
+  padding: 1rem 0;
+  cursor: pointer;
+  display: flex;
+  padding-left: 1rem;
+
+  &:hover {
+    background-color: rgba(0, 0, 255, 0.1); /* Hover effect */
+    border-right: 4px solid blue; /* Blue border on hover */
+  }
+
+  svg {
+    width: 1.2rem;
+    height: auto;
+    filter: invert(0%); /* Changed icon color to dark blue */
+    transition: filter 0.3s ease;
+
+    &:hover {
+      filter: invert(40%) sepia(100%) saturate(1000%) hue-rotate(180deg) brightness(100%) contrast(100%); /* Change color on hover */
+    }
+  }
+`;
+
+const Text = styled.span`
+  width: ${(props) => (props.clicked ? "100%" : "0")};
+  overflow: hidden;
+  margin-left: ${(props) => (props.clicked ? "1.5rem" : "0")};
+  transition: all 0.3s ease;
+`;
 
 const NavBarComponent = () => {
-  const [active, setActive] = useState(null);
+  const [click, setClick] = useState(false);
+  const handleClick = () => setClick(!click);
 
   return (
-    <Menu setActive={setActive}>
-      <MenuItem setActive={setActive} active={active} item="Home">
-        <HoveredLink to="/">Go to Home</HoveredLink>
-      </MenuItem>
-      <MenuItem setActive={setActive} active={active} item="Events">
-        <HoveredLink to="/events">View Events</HoveredLink>
-      </MenuItem>
-      <MenuItem setActive={setActive} active={active} item="Our Team">
-        <HoveredLink to="/our-team">Meet Our Team</HoveredLink>
-      </MenuItem>
-      <MenuItem setActive={setActive} active={active} item="Contact Us">
-        <HoveredLink to="/contact-us">Get in Touch</HoveredLink>
-      </MenuItem>
-    </Menu>
+    <Container>
+      <Button clicked={click} onClick={() => handleClick()}>
+        Click
+      </Button>
+      <SidebarContainer>
+        <Logo>
+          <img src={logo} alt="logo" />
+        </Logo>
+        <SlickBar clicked={click}>
+          <Item onClick={() => setClick(false)} exact activeClassName="active" to="/">
+            <FontAwesomeIcon icon={faHome} />
+            <Text clicked={click}>Home</Text>
+          </Item>
+          <Item onClick={() => setClick(false)} activeClassName="active" to="/events">
+            <FontAwesomeIcon icon={faCalendarAlt} />
+            <Text clicked={click}>Events</Text>
+          </Item>
+          <Item onClick={() => setClick(false)} activeClassName="active" to="/our-team">
+            <FontAwesomeIcon icon={faUsers} />
+            <Text clicked={click}>Team</Text>
+          </Item>
+          <Item onClick={() => setClick(false)} activeClassName="active" to="/contact-us">
+            <FontAwesomeIcon icon={faFileAlt} />
+            <Text clicked={click}>Contact</Text>
+          </Item>
+        </SlickBar>
+      </SidebarContainer>
+    </Container>
   );
-};
-
-// PropTypes for better validation and documentation
-MenuItem.propTypes = {
-  setActive: PropTypes.func.isRequired,
-  active: PropTypes.string,
-  item: PropTypes.string.isRequired,
-  children: PropTypes.node,
-};
-
-Menu.propTypes = {
-  setActive: PropTypes.func.isRequired,
-  children: PropTypes.node.isRequired,
-};
-
-HoveredLink.propTypes = {
-  children: PropTypes.node.isRequired,
 };
 
 export default NavBarComponent;
