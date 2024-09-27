@@ -6,6 +6,7 @@ import {Mission} from '../components/HomePageComponents/Mission';
 import AboutACM from '../components/HomePageComponents/AboutACM';
 import AboutFast from '../components/HomePageComponents/AboutFast';
 import Sponsor from '../components/HomePageComponents/Sponsor';
+// import { AchievementSection } from '../components/HomePageComponents/AchievementSection';
 
 export function Home() {
   return (
@@ -13,8 +14,9 @@ export function Home() {
       <HeroSectionComponent />
       <CardSection/>
       <Mission/>
-      <AboutACM/>
       <AboutFast/>
+      <AboutACM/>
+      {/* <AchievementSection/> */}
       <Sponsor/>
     </div>
   );

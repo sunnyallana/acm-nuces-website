@@ -11,7 +11,7 @@ export default function HeroSectionComponent() {
             </p>
             <a
                 href="/learn-more"
-                className="px-6 py-3 bg-[#257fb5] hover:bg-[#0b466d] text-white font-semibold rounded-lg transition duration-200"
+                className="px-6 py-3 bg-[#227ebd] hover:bg-[#257fb5] text-white font-semibold rounded-lg transition duration-200"
             >
                 Learn More
             </a>
