@@ -4,6 +4,8 @@ import HeroSectionComponent from '../components/HomePageComponents/HeroSectionCo
 import { CardSection } from '../components/HomePageComponents/CardSection';
 import {Mission} from '../components/HomePageComponents/Mission';
 import AboutACM from '../components/HomePageComponents/AboutACM';
+import AboutFast from '../components/HomePageComponents/AboutFast';
+
 export function Home() {
 
   return (
@@ -12,6 +14,7 @@ export function Home() {
       <CardSection/>
       <Mission/>
       <AboutACM/>
+      <AboutFast/>
     </div>
   );
 }
