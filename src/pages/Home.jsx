@@ -5,6 +5,7 @@ import { CardSection } from '../components/HomePageComponents/CardSection';
 import {Mission} from '../components/HomePageComponents/Mission';
 import AboutACM from '../components/HomePageComponents/AboutACM';
 import AboutFast from '../components/HomePageComponents/AboutFast';
+import Sponsor from '../components/HomePageComponents/Sponsor';
 
 export function Home() {
 
@@ -15,6 +16,7 @@ export function Home() {
       <Mission/>
       <AboutACM/>
       <AboutFast/>
+      <Sponsor/>
     </div>
   );
 }
