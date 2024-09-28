@@ -4,9 +4,9 @@ import { FaInstagram, FaLinkedin, FaFacebook } from "react-icons/fa";
 
 const FooterComponent = () => {
   return (
-    <div className="bg-white">
-      <footer>
-      <div className="mx-auto w-full p-4 py-6 lg:py-8 pl-20">
+    <div className="bg-gradient-to-r from-gray-100 to-gray-200">
+      <footer className="bg-[url('/subtle-dots.png')] bg-repeat shadow-lg shadow-black">
+        <div className="mx-auto w-full p-4 py-6 lg:py-8 pl-20">
           <div className="md:flex md:justify-between">
             {/* Logo Section */}
             <div className="mb-6 md:mb-0 ml-9">
@@ -38,9 +38,6 @@ const FooterComponent = () => {
                       Coders Cup
                     </a>
                   </li>
-                  {/* Additional Events can be added here */}
-                </ul>
-                <ul className="text-gray-600 font-medium text-lg">
                   <li className="mb-4">
                     <a
                       href="https://www.acmdevday.com/"
@@ -49,7 +46,6 @@ const FooterComponent = () => {
                       ACM Developers Day
                     </a>
                   </li>
-                  {/* Additional Events can be added here */}
                 </ul>
               </div>
 
@@ -67,9 +63,6 @@ const FooterComponent = () => {
                       Sunny Shaban Ali
                     </a>
                   </li>
-                  {/* Additional Events can be added here */}
-                </ul>
-                <ul className="text-gray-600 font-medium text-lg">
                   <li className="mb-4">
                     <a
                       href="https://www.linkedin.com/in/owais-rafiq-639494253/"
@@ -78,9 +71,6 @@ const FooterComponent = () => {
                       Owais Rafiq
                     </a>
                   </li>
-                  {/* Additional Events can be added here */}
-                </ul>
-                <ul className="text-gray-600 font-medium text-lg">
                   <li className="mb-4">
                     <a
                       href="https://www.linkedin.com/in/ali-nazir-74b909275/"
@@ -89,7 +79,6 @@ const FooterComponent = () => {
                       Ali Nazir
                     </a>
                   </li>
-                  {/* Additional Events can be added here */}
                 </ul>
               </div>
 
@@ -101,19 +90,19 @@ const FooterComponent = () => {
                 <div className="flex flex-wrap mt-4 items-left justify-left">
                   <a
                     href="https://www.instagram.com/acmnuceskhi/"
-                    className="text-[#031e2c] mx-1 lg:mx-4 text-xl sm:text-2xl"
+                    className="text-[#031e2c] mx-1 lg:mx-4 text-xl sm:text-2xl hover:text-gray-600 transition-colors"
                   >
                     <FaInstagram />
                   </a>
                   <a
                     href="https://www.linkedin.com/company/acmnuceskhi"
-                    className="text-[#031e2c] mx-1 lg:mx-4 text-xl sm:text-2xl"
+                    className="text-[#031e2c] mx-1 lg:mx-4 text-xl sm:text-2xl hover:text-gray-600 transition-colors"
                   >
                     <FaLinkedin />
                   </a>
                   <a
                     href="https://www.facebook.com/acmnuceskhi/"
-                    className="text-[#031e2c] mx-1 lg:mx-4 text-xl sm:text-2xl"
+                    className="text-[#031e2c] mx-1 lg:mx-4 text-xl sm:text-2xl hover:text-gray-600 transition-colors"
                   >
                     <FaFacebook />
                   </a>
@@ -127,7 +116,7 @@ const FooterComponent = () => {
 
           {/* Footer Text */}
           <h2 className="text-sm text-center text-gray-600">
-            © 2024{" "}
+            © {new Date().getFullYear()}{" "}
             <a
               href="https://devday23.tech/index.html"
               className="hover:underline text-[#031e2c]"
