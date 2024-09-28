@@ -36,7 +36,7 @@ export default function ContactUs() {
           </Typography>
           <Divider sx={{ backgroundColor: 'white', my: 2 }} />
           <Typography variant="h5" align="center">
-            We're here to help and answer any question you might have
+            We're here to help and answer any questions you might have
           </Typography>
         </Paper>
 
@@ -58,7 +58,7 @@ export default function ContactUs() {
                 referrerPolicy="no-referrer-when-downgrade"
               ></iframe>
             </Box>
-            <Card variant="outlined" sx={{ borderRadius: 2, boxShadow: 3, transition: 'transform 0.3s', '&:hover': { transform: 'scale(1.015)', boxShadow: 6 } }}>
+            <Card variant="outlined" sx={{ borderRadius: 2, boxShadow: 3, mb: 4, transition: 'transform 0.3s', '&:hover': { transform: 'scale(1.015)', boxShadow: 6 } }}>
               <CardHeader
                 title="Location Details"
                 sx={{ bgcolor: 'primary.main', color: 'white' }}
@@ -84,35 +84,52 @@ export default function ContactUs() {
           <Grid item xs={12} md={6}>
             <Card variant="outlined" sx={{ mb: 4, borderRadius: 2, boxShadow: 3, transition: 'transform 0.3s', '&:hover': { transform: 'scale(1.015)', boxShadow: 6 } }}>
               <CardHeader
+                title="ACM NUCES Secretary"
+                sx={{ bgcolor: 'primary.main', color: 'white' }}
+              />
+              <CardContent>
+                <Typography variant="body1" gutterBottom><strong>Name:</strong> Neeraj Otwani</Typography>
+                <Box display="flex" alignItems="center" mb={2}>
+                  <PhoneIcon color="primary" sx={{ mr: 1 }} />
+                  <Typography variant="body1">+92 322 288 3752</Typography>
+                </Box>
+                <Box display="flex" alignItems="center">
+                  <EmailIcon color="primary" sx={{ mr: 1 }} />
+                  <Typography variant="body1">K213223@nu.edu.pk</Typography>
+                </Box>
+              </CardContent>
+            </Card>
+            <Card variant="outlined" sx={{ mb: 4, borderRadius: 2, boxShadow: 3, transition: 'transform 0.3s', '&:hover': { transform: 'scale(1.015)', boxShadow: 6 } }}>
+              <CardHeader
                 title="ACM NUCES President"
                 sx={{ bgcolor: 'primary.main', color: 'white' }}
               />
               <CardContent>
-                <Typography variant="body1" gutterBottom><strong>Name:</strong> Hassaan</Typography>
+                <Typography variant="body1" gutterBottom><strong>Name:</strong> Hassaan Shahid</Typography>
                 <Box display="flex" alignItems="center" mb={2}>
                   <PhoneIcon color="primary" sx={{ mr: 1 }} />
-                  <Typography variant="body1">+92 300 1234567</Typography>
+                  <Typography variant="body1">+92 311 248 7725</Typography>
                 </Box>
                 <Box display="flex" alignItems="center">
                   <EmailIcon color="primary" sx={{ mr: 1 }} />
-                  <Typography variant="body1">Hassaan</Typography>
+                  <Typography variant="body1">K213177@nu.edu.pk</Typography>
                 </Box>
               </CardContent>
             </Card>
-            <Card variant="outlined" sx={{ borderRadius: 2, boxShadow: 3, transition: 'transform 0.3s', '&:hover': { transform: 'scale(1.015)', boxShadow: 6 } }}>
+            <Card variant="outlined" sx={{ mb: 4, borderRadius: 2, boxShadow: 3, transition: 'transform 0.3s', '&:hover': { transform: 'scale(1.015)', boxShadow: 6 } }}>
               <CardHeader
                 title="ACM NUCES Vice President"
                 sx={{ bgcolor: 'primary.main', color: 'white' }}
               />
               <CardContent>
-                <Typography variant="body1" gutterBottom><strong>Name:</strong> Rahim</Typography>
+                <Typography variant="body1" gutterBottom><strong>Name:</strong> Rahim Khan</Typography>
                 <Box display="flex" alignItems="center" mb={2}>
                   <PhoneIcon color="primary" sx={{ mr: 1 }} />
-                  <Typography variant="body1">+92 300 7654321</Typography>
+                  <Typography variant="body1">+92 336 392 7036</Typography>
                 </Box>
                 <Box display="flex" alignItems="center">
                   <EmailIcon color="primary" sx={{ mr: 1 }} />
-                  <Typography variant="body1">Rahim</Typography>
+                  <Typography variant="body1">K214536@nu.edu.pk</Typography>
                 </Box>
               </CardContent>
             </Card>
