@@ -5,7 +5,8 @@ import { FaInstagram, FaLinkedin, FaFacebook } from "react-icons/fa";
 const FooterComponent = () => {
   return (
     <div className="bg-gradient-to-r from-gray-100 to-gray-200">
-      <footer className="bg-[url('/subtle-dots.png')] bg-repeat shadow-lg shadow-black">
+      <footer className="bg-repeat shadow-lg shadow-black">
+      {/* <footer className="bg-[url('/subtle-dots.png')] bg-repeat shadow-lg shadow-black"> */}
         <div className="mx-auto w-full p-4 py-6 lg:py-8 pl-20">
           <div className="md:flex md:justify-between">
             {/* Logo Section */}

@@ -1,8 +1,8 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import { MapPin, Users } from 'lucide-react'
-import Logo1 from "../../assets/codersCup.png"
-import Logo2 from "../../assets/developerDay.jpeg"
+import Logo1 from "../../assets/images/events/codersCup.png"
+import Logo2 from "../../assets/images/events/developerDay.jpeg"
 
 const events = [
   {

@@ -1,9 +1,8 @@
 import React, { useState } from 'react'
-import about1 from "../../assets/about-3.webp"
-import about2 from "../../assets/about-4.webp"
-import about3 from "../../assets/about-7.webp"
-import about4 from "../../assets/about-8.webp"
-import about5 from "../../assets/about-2.webp"
+import about1 from "../../assets/images/events/about-1.webp"
+import about2 from "../../assets/images/events/about-2.webp"
+import about3 from "../../assets/images/events/about-7.webp"
+import about4 from "../../assets/images/events/about-8.webp"
 import { X } from 'lucide-react'
 
 const events = [
@@ -11,12 +10,10 @@ const events = [
   { id: 2, title: "Tech Conference", date: "2023-08-22", imageUrl: about2, height: 400 },
   { id: 3, title: "Art Exhibition", date: "2023-09-10", imageUrl: about3, height: 350 },
   { id: 4, title: "Food Tasting", date: "2023-10-05", imageUrl: about4, height: 300 },
-  { id: 5, title: "Marathon", date: "2023-11-12", imageUrl: about5, height: 350 },
   { id: 6, title: "Winter Wonderland", date: "2023-12-20", imageUrl: about1, height: 300 },
   { id: 7, title: "Charity Run", date: "2024-01-15", imageUrl: about2, height: 400 },
   { id: 8, title: "Film Festival", date: "2024-02-25", imageUrl: about3, height: 400 },
   { id: 9, title: "Startup Expo", date: "2024-03-12", imageUrl: about4, height: 400 },
-  { id: 10, title: "Music Gala", date: "2024-04-05", imageUrl: about5, height: 400 },
   { id: 11, title: "Procom 2024", date: "2024-04-05", imageUrl: about1, height: 400 },
   { id: 12, title: "Developer Day 2024", date: "2024-04-05", imageUrl: about2, height: 300 },
 ]
