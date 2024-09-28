@@ -104,7 +104,7 @@ export default function ContactUs() {
                 </Box>
                 <Box display="flex" alignItems="center">
                   <EmailIcon color="primary" sx={{ mr: 1 }} />
-                  <Typography variant="body1">K213223@nu.edu.pk</Typography>
+                  <Typography variant="body1">k213223@nu.edu.pk</Typography>
                 </Box>
               </CardContent>
             </Card>
@@ -121,7 +121,7 @@ export default function ContactUs() {
                 </Box>
                 <Box display="flex" alignItems="center">
                   <EmailIcon color="primary" sx={{ mr: 1 }} />
-                  <Typography variant="body1">K213177@nu.edu.pk</Typography>
+                  <Typography variant="body1">k213177@nu.edu.pk</Typography>
                 </Box>
               </CardContent>
             </Card>
@@ -138,7 +138,7 @@ export default function ContactUs() {
                 </Box>
                 <Box display="flex" alignItems="center">
                   <EmailIcon color="primary" sx={{ mr: 1 }} />
-                  <Typography variant="body1">K214536@nu.edu.pk</Typography>
+                  <Typography variant="body1">k214536@nu.edu.pk</Typography>
                 </Box>
               </CardContent>
             </Card>
