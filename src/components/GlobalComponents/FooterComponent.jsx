@@ -112,7 +112,7 @@ const FooterComponent = () => {
                     <FaLinkedin />
                   </a>
                   <a
-                    href="https://www.facebook.com/acmnuces/"
+                    href="https://www.facebook.com/acmnuceskhi/"
                     className="text-[#031e2c] mx-1 lg:mx-4 text-xl sm:text-2xl"
                   >
                     <FaFacebook />

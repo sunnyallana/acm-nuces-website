@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import { NavLink } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHome, faUsers, faCalendarAlt, faFileAlt } from '@fortawesome/free-solid-svg-icons';
-import logo from "../../assets/acm.svg";
+import { faHome, faUsers, faCalendarAlt, faPhone } from '@fortawesome/free-solid-svg-icons'; 
+import logo from "../../assets/acm-logo-png.png";
 
 const Container = styled.div`
   position: fixed;
@@ -34,12 +34,12 @@ const Button = styled.button`
   }
 
   &::before {
-    top: ${(props) => (props.clicked ? "1.5" : "1rem")};
+    top: ${(props) => (props.clicked ? "1.5rem" : "1rem")};
     transform: ${(props) => (props.clicked ? "rotate(135deg)" : "rotate(0)")};
   }
 
   &::after {
-    top: ${(props) => (props.clicked ? "1.2" : "1.5rem")};
+    top: ${(props) => (props.clicked ? "1.2rem" : "1.5rem")};
     transform: ${(props) => (props.clicked ? "rotate(-135deg)" : "rotate(0)")};
   }
 `;
@@ -60,13 +60,14 @@ const SidebarContainer = styled.div`
 `;
 
 const Logo = styled.div`
-  width: 4rem; /* Increased width for the logo */
+  width: 5.75rem; /* Increased width for the logo */
   margin-bottom: 1rem; /* Added margin for spacing */
 
   img {
+    margin-left: 0.3rem;
     width: 100%;
     height: auto; /* Keep aspect ratio */
-    max-height: 4rem; /* Increased maximum height */
+    max-height: 5.75rem; /* Increased maximum height */
   }
 `;
 
@@ -94,7 +95,8 @@ const Item = styled(NavLink)`
   padding: 1rem 0;
   cursor: pointer;
   display: flex;
-  padding-left: 1rem;
+  justify-content: center; /* Center icons horizontally */
+  align-items: center; /* Center icons vertically */
 
   &:hover {
     background-color: rgba(0, 0, 255, 0.1); /* Hover effect */
@@ -108,7 +110,7 @@ const Item = styled(NavLink)`
     transition: filter 0.3s ease;
 
     &:hover {
-      filter: invert(40%) sepia(100%) saturate(1000%) hue-rotate(180deg) brightness(100%) contrast(100%); /* Change color on hover */
+      filter: brightness(0) saturate(100%) invert(50%) sepia(100%) saturate(1000%) hue-rotate(180deg) brightness(100%) contrast(100%); /* Change color on hover */
     }
   }
 `;
@@ -145,7 +147,7 @@ const NavBarComponent = () => {
             <Text clicked={click}>Team</Text>
           </Item>
           <Item onClick={() => setClick(false)} activeClassName="active" to="/contact-us">
-            <FontAwesomeIcon icon={faFileAlt} />
+            <FontAwesomeIcon icon={faPhone} />
             <Text clicked={click}>Contact</Text>
           </Item>
         </SlickBar>
