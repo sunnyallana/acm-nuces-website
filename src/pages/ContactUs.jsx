@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { 
   Card, 
   CardContent, 
@@ -9,7 +9,8 @@ import {
   ThemeProvider,
   createTheme,
   Paper,
-  Divider
+  Divider,
+  CircularProgress
 } from '@mui/material';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import PhoneIcon from '@mui/icons-material/Phone';
@@ -25,6 +26,8 @@ const theme = createTheme({
 });
 
 export default function ContactUs() {
+  const [mapLoaded, setMapLoaded] = useState(false);
+
   return (
     <ThemeProvider theme={theme}>
       <Box sx={{ flexGrow: 1, bgcolor: 'background.paper', minHeight: '100vh', p: 4, pl: 10 }}>
@@ -43,6 +46,11 @@ export default function ContactUs() {
         <Grid container spacing={4}>
           <Grid item xs={12} md={6}>
             <Box sx={{ mb: 4, height: 0, paddingBottom: '56.25%', position: 'relative' }}>
+              {!mapLoaded && (
+                <Box sx={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center', bgcolor: '#f0f0f0' }}>
+                  <CircularProgress />
+                </Box>
+              )}
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3620.203336047934!2d67.26210887401167!3d24.856903945402394!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb3316c5276e35b%3A0x823a6a0100195ffd!2sFAST%20National%20University%20Karachi%20Campus!5e0!3m2!1sen!2s!4v1727465448702!5m2!1sen!2s"
                 style={{
@@ -56,6 +64,7 @@ export default function ContactUs() {
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
+                onLoad={() => setMapLoaded(true)} // Set loaded state when the map is ready
               ></iframe>
             </Box>
             <Card variant="outlined" sx={{ borderRadius: 2, boxShadow: 3, mb: 4, transition: 'transform 0.3s', '&:hover': { transform: 'scale(1.015)', boxShadow: 6 } }}>

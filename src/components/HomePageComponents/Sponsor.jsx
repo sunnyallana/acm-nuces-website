@@ -1,12 +1,12 @@
-import React from 'react';
-import Sponsor1 from "../../assets/sponsor1.png"
-import Sponsor2 from "../../assets/sponsor2.png"
-import Sponsor3 from "../../assets/sponsor3.png"
-import Sponsor4 from "../../assets/sponsor4.png"
-import Sponsor5 from "../../assets/sponsor5.png"
-import Sponsor6 from "../../assets/sponsor6.png"
-import Sponsor7 from "../../assets/sponsor7.png"
-import Sponsor8 from "../../assets/sponsor8.png"
+import React, { useEffect } from 'react';
+import Sponsor1 from "../../assets/images/sponsors/sponsor1.png";
+import Sponsor2 from "../../assets/images/sponsors/sponsor2.png";
+import Sponsor3 from "../../assets/images/sponsors/sponsor3.png";
+import Sponsor4 from "../../assets/images/sponsors/sponsor4.png";
+import Sponsor5 from "../../assets/images/sponsors/sponsor5.png";
+import Sponsor6 from "../../assets/images/sponsors/sponsor6.png";
+import Sponsor7 from "../../assets/images/sponsors/sponsor7.png";
+import Sponsor8 from "../../assets/images/sponsors/sponsor8.png";
 
 const sponsorLogos = [
   { id: 1, name: 'Company A', logo: Sponsor1 },
@@ -19,7 +19,19 @@ const sponsorLogos = [
   { id: 8, name: 'Company H', logo: Sponsor8 },
 ];
 
+const preloadImages = (images) => {
+  images.forEach((src) => {
+    const img = new Image();
+    img.src = src;
+  });
+};
+
 const Sponsor = () => {
+  useEffect(() => {
+    const imageUrls = sponsorLogos.map(sponsor => sponsor.logo);
+    preloadImages(imageUrls);
+  }, []);
+
   return (
     <div className="w-full py-12 overflow-hidden">
       <div className="w-full py-12 overflow-hidden pl-14">
