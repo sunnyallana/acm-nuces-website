@@ -13,34 +13,34 @@ const Container = styled.div`
 const Button = styled.button`
   background-color: var(--black);
   border: none;
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 3rem; /* Increased button width */
+  height: 3rem; /* Increased button height */
   border-radius: 50%;
   margin: 0.5rem 0 0 0.5rem;
   cursor: pointer;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: center; /* Center the lines */
+  align-items: center; /* Center the lines */
   position: relative;
 
   &::before,
   &::after {
     content: "";
     background-color: var(--white);
-    height: 2px;
-    width: 1rem;
+    height: 3px; /* Increased height for better visibility */
+    width: 1.5rem; /* Increased width for better visibility */
     position: absolute;
     transition: all 0.3s ease;
   }
 
   &::before {
     top: ${(props) => (props.clicked ? "1.5rem" : "1rem")};
-    transform: ${(props) => (props.clicked ? "rotate(135deg)" : "rotate(0)")};
+    transform: ${(props) => (props.clicked ? "rotate(45deg)" : "rotate(0)")}; /* Cross effect */
   }
 
   &::after {
-    top: ${(props) => (props.clicked ? "1.2rem" : "1.5rem")};
-    transform: ${(props) => (props.clicked ? "rotate(-135deg)" : "rotate(0)")};
+    top: ${(props) => (props.clicked ? "1.5rem" : "1.5rem")};
+    transform: ${(props) => (props.clicked ? "rotate(-45deg)" : "rotate(0)")}; /* Cross effect */
   }
 `;
 
@@ -76,7 +76,7 @@ const SlickBar = styled.ul`
   list-style: none;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: center; /* Center items in the sidebar */
   background-color: #f0f0f0; /* Changed background to match sidebar */
   padding: 0; /* Remove padding */
   margin: 0; /* Remove margin */
@@ -92,11 +92,14 @@ const Item = styled(NavLink)`
   text-decoration: none;
   color: black; /* Changed link color to black */
   width: 100%;
-  padding: 1rem 0;
+  padding: 1rem 0; /* Padding for top and bottom */
   cursor: pointer;
   display: flex;
   justify-content: center; /* Center icons horizontally */
   align-items: center; /* Center icons vertically */
+  
+  /* Add left padding when burger is clicked */
+  padding-left: ${(props) => (props.clicked ? "1rem" : "0")}; 
 
   &:hover {
     background-color: rgba(0, 0, 255, 0.1); /* Hover effect */
@@ -104,7 +107,7 @@ const Item = styled(NavLink)`
   }
 
   svg {
-    width: 1.2rem;
+    width: 1.5rem; /* Increased icon size for better visibility */
     height: auto;
     filter: invert(0%); /* Changed icon color to dark blue */
     transition: filter 0.3s ease;
@@ -118,8 +121,9 @@ const Item = styled(NavLink)`
 const Text = styled.span`
   width: ${(props) => (props.clicked ? "100%" : "0")};
   overflow: hidden;
-  margin-left: ${(props) => (props.clicked ? "1.5rem" : "0")};
+  margin-left: ${(props) => (props.clicked ? "1rem" : "0")}; /* Adjusted margin */
   transition: all 0.3s ease;
+  white-space: nowrap; /* Prevent text wrapping */
 `;
 
 const NavBarComponent = () => {
@@ -134,19 +138,19 @@ const NavBarComponent = () => {
           <img src={logo} alt="logo" />
         </Logo>
         <SlickBar clicked={click}>
-          <Item onClick={() => setClick(false)} exact activeClassName="active" to="/">
+          <Item onClick={() => setClick(false)} exact activeClassName="active" to="/" clicked={click}>
             <FontAwesomeIcon icon={faHome} />
             <Text clicked={click}>Home</Text>
           </Item>
-          <Item onClick={() => setClick(false)} activeClassName="active" to="/events">
+          <Item onClick={() => setClick(false)} activeClassName="active" to="/events" clicked={click}>
             <FontAwesomeIcon icon={faCalendarAlt} />
             <Text clicked={click}>Events</Text>
           </Item>
-          <Item onClick={() => setClick(false)} activeClassName="active" to="/our-team">
+          <Item onClick={() => setClick(false)} activeClassName="active" to="/our-team" clicked={click}>
             <FontAwesomeIcon icon={faUsers} />
             <Text clicked={click}>Team</Text>
           </Item>
-          <Item onClick={() => setClick(false)} activeClassName="active" to="/contact-us">
+          <Item onClick={() => setClick(false)} activeClassName="active" to="/contact-us" clicked={click}>
             <FontAwesomeIcon icon={faPhone} />
             <Text clicked={click}>Contact</Text>
           </Item>
