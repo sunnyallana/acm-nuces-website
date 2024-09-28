@@ -34,13 +34,13 @@ const Button = styled.button`
   }
 
   &::before {
-    top: ${(props) => (props.clicked ? "1.5rem" : "1rem")};
-    transform: ${(props) => (props.clicked ? "rotate(45deg)" : "rotate(0)")}; /* Cross effect */
+    top: ${(props) => (props.$clicked ? "1.5rem" : "1rem")};
+    transform: ${(props) => (props.$clicked ? "rotate(45deg)" : "rotate(0)")}; /* Cross effect */
   }
 
   &::after {
-    top: ${(props) => (props.clicked ? "1.5rem" : "1.5rem")};
-    transform: ${(props) => (props.clicked ? "rotate(-45deg)" : "rotate(0)")}; /* Cross effect */
+    top: ${(props) => (props.$clicked ? "1.5rem" : "1.5rem")};
+    transform: ${(props) => (props.$clicked ? "rotate(-45deg)" : "rotate(0)")}; /* Cross effect */
   }
 `;
 
@@ -83,12 +83,12 @@ const SlickBar = styled.ul`
   position: absolute;
   top: 6rem; /* Ensure this doesn't cause unwanted spacing */
   left: 0;
-  width: ${(props) => (props.clicked ? "12rem" : "4rem")}; /* Adjusted width */
+  width: ${(props) => (props.$clicked ? "12rem" : "4rem")}; /* Adjusted width */
   transition: all 0.5s ease;
   border-radius: 0 30px 30px 0;
 `;
 
-const Item = styled(NavLink)`
+const Item = styled(({ clicked, exact, ...props }) => <NavLink {...props} />)`
   text-decoration: none;
   color: black; /* Changed link color to black */
   width: 100%;
@@ -97,7 +97,7 @@ const Item = styled(NavLink)`
   display: flex;
   justify-content: center; /* Center icons horizontally */
   align-items: center; /* Center icons vertically */
-  
+
   /* Add left padding when burger is clicked */
   padding-left: ${(props) => (props.clicked ? "1rem" : "0")}; 
 
@@ -119,9 +119,9 @@ const Item = styled(NavLink)`
 `;
 
 const Text = styled.span`
-  width: ${(props) => (props.clicked ? "100%" : "0")};
+  width: ${(props) => (props.$clicked ? "100%" : "0")};
   overflow: hidden;
-  margin-left: ${(props) => (props.clicked ? "1rem" : "0")}; /* Adjusted margin */
+  margin-left: ${(props) => (props.$clicked ? "1rem" : "0")}; /* Adjusted margin */
   transition: all 0.3s ease;
   white-space: nowrap; /* Prevent text wrapping */
 `;
@@ -132,27 +132,27 @@ const NavBarComponent = () => {
 
   return (
     <Container>
-      <Button clicked={click} onClick={handleClick}></Button>
+      <Button $clicked={click} onClick={handleClick}></Button>
       <SidebarContainer>
         <Logo>
           <img src={logo} alt="logo" />
         </Logo>
-        <SlickBar clicked={click}>
-          <Item onClick={() => setClick(false)} exact activeClassName="active" to="/" clicked={click}>
+        <SlickBar $clicked={click}>
+          <Item onClick={() => setClick(false)} exact to="/" clicked={click}>
             <FontAwesomeIcon icon={faHome} />
-            <Text clicked={click}>Home</Text>
+            <Text $clicked={click}>Home</Text>
           </Item>
-          <Item onClick={() => setClick(false)} activeClassName="active" to="/events" clicked={click}>
+          <Item onClick={() => setClick(false)} to="/events" clicked={click}>
             <FontAwesomeIcon icon={faCalendarAlt} />
-            <Text clicked={click}>Events</Text>
+            <Text $clicked={click}>Events</Text>
           </Item>
-          <Item onClick={() => setClick(false)} activeClassName="active" to="/our-team" clicked={click}>
+          <Item onClick={() => setClick(false)} to="/our-team" clicked={click}>
             <FontAwesomeIcon icon={faUsers} />
-            <Text clicked={click}>Team</Text>
+            <Text $clicked={click}>Team</Text>
           </Item>
-          <Item onClick={() => setClick(false)} activeClassName="active" to="/contact-us" clicked={click}>
+          <Item onClick={() => setClick(false)} to="/contact-us" clicked={click}>
             <FontAwesomeIcon icon={faPhone} />
-            <Text clicked={click}>Contact</Text>
+            <Text $clicked={click}>Contact</Text>
           </Item>
         </SlickBar>
       </SidebarContainer>
