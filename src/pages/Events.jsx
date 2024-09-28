@@ -1,10 +1,12 @@
 import React from 'react';
+import ParallaxSection from "../components/EventPageComponents/ParallaxSection";
+import UpcomingEvents from "../components/EventPageComponents/UpcomingEvents";
 
 export function Events() {
   return (
     <div>
-      <h2>Past Events Page</h2>
-      <p>Here are some details about our past events.</p>
+      <UpcomingEvents/>
+      <ParallaxSection />
     </div>
   );
 }
