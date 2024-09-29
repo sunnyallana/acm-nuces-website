@@ -2,7 +2,7 @@ import WavyBackground from './WavyBackground';
 
 export default function HeroSectionComponent() {
     return (
-        <WavyBackground className="flex flex-col items-center justify-center text-white p-4 pl-16 sm:p-0">
+        <WavyBackground className="flex flex-col items-center justify-center text-white p-4 pl-20 sm:p-0">
             <h1 className="text-4xl md:text-6xl font-bold mb-4 text-center">
                 Welcome to ACM NUCES
             </h1>
