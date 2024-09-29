@@ -1,29 +1,37 @@
 import { CardDemo } from './KeyCards';
+import team1 from "../../assets/images/excellence/team1.jpg"
+import team2 from "../../assets/images/excellence/team2.jpg"
+import comp1 from "../../assets/images/excellence/comp1.jpg"
+import comp2 from "../../assets/images/excellence/comp2.jpg"
+import ex1 from "../../assets/images/excellence/excellence1.jpg"
+import ex2 from "../../assets/images/excellence/ex2.jpg"
+import grow1 from "../../assets/images/excellence/grow1.jpg"
+import grow2 from "../../assets/images/excellence/grow2.jpg"
 
 const cardData = [
   {
     name: "500+ Members",
     description: "Active Student Participants",
-    bgImage: "https://images.unsplash.com/photo-1476842634003-7dcca8f832de?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80",
-    afterBgImage: "https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExNWlodTF3MjJ3NnJiY3Rlc2J0ZmE0c28yeWoxc3gxY2VtZzA5ejF1NSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/syEfLvksYQnmM/giphy.gif",
+    bgImage: team1,
+    afterBgImage: team2,
   },
   {
     name: "20+ Competitions",
     description: "Organized annually",
-    bgImage: "https://images.unsplash.com/photo-1476842634003-7dcca8f832de?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80",
-    afterBgImage: "https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExNWlodTF3MjJ3NnJiY3Rlc2J0ZmE0c28yeWoxc3gxY2VtZzA5ejF1NSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/syEfLvksYQnmM/giphy.gif",
+    bgImage: comp2,
+    afterBgImage: comp1,
   },
   {
     name: "15+ Years",
     description: "Of excellence",
-    bgImage: "https://images.unsplash.com/photo-1476842634003-7dcca8f832de?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80",
-    afterBgImage: "https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExNWlodTF3MjJ3NnJiY3Rlc2J0ZmE0c28yeWoxc3gxY2VtZzA5ejF1NSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/syEfLvksYQnmM/giphy.gif",
+    bgImage: ex2,
+    afterBgImage: ex1,
   },
   {
     name: "100% Growth",
     description: "Year-over-year impact",
-    bgImage: "https://images.unsplash.com/photo-1476842634003-7dcca8f832de?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80",
-    afterBgImage: "https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExNWlodTF3MjJ3NnJiY3Rlc2J0ZmE0c28yeWoxc3gxY2VtZzA5ejF1NSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/syEfLvksYQnmM/giphy.gif",
+    bgImage: grow1,
+    afterBgImage: grow2,
   },
 ];
 
