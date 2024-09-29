@@ -1,37 +1,38 @@
 import React from "react";
 import { Card, CardContent, CardMedia, Typography } from "@mui/material";
 import { motion } from "framer-motion";
+import dummyPic from "../../assets/images/excom/dummy.jpg"; // Adjust the path as needed
 
 const committeeData = [
   {
     name: "Hassaan Gatta",
     designation: "President",
-    pic: "https://example.com/hassaan-gatta.jpg",
+    pic: dummyPic,
   },
   {
     name: "Rahim Khan",
     designation: "Vice President",
-    pic: "https://example.com/rahim-khan.jpg",
+    pic: dummyPic,
   },
   {
     name: "Neeraj Otwani",
     designation: "Secretary",
-    pic: "https://example.com/neeraj-otwani.jpg",
+    pic: dummyPic,
   },
   {
     name: "Fawaz Ahmed",
     designation: "General Secretary",
-    pic: "https://example.com/fawaz-ahmed.jpg",
+    pic: dummyPic,
   },
   {
-    name: "Tehreem Ali Khan",
+    name: "Tehreem Ali",
     designation: "Media and Promotions",
-    pic: "https://example.com/tehreem-ali-khan.jpg",
+    pic: dummyPic,
   },
   {
     name: "Muhammad Shaheer",
     designation: "Tech Lead",
-    pic: "https://example.com/muhammad-shaheer.jpg",
+    pic: dummyPic,
   },
 ];
 
@@ -64,7 +65,7 @@ const headingVariants = {
 const ExecutiveCommittee = () => {
   return (
     <section className="ezy__team20 light py-14 md:py-24 bg-white dark:bg-[#0b1727] text-zinc-900 dark:text-white">
-      <div className="container px-4 mx-auto pl-20"> {/* Added pl-20 here */}
+      <div className="container px-4 mx-auto pl-20">
         <div className="flex justify-center text-center">
           <div className="sm:max-w-lg">
             <motion.h2
@@ -77,29 +78,27 @@ const ExecutiveCommittee = () => {
             </motion.h2>
           </div>
         </div>
-        <div className="grid grid-cols-4 gap-6">
+        <div className="flex justify-center flex-wrap gap-6">
           {committeeData.map((member, index) => (
-            <div key={index} className="col-span-4 sm:col-span-2 lg:col-span-1">
-              <motion.div variants={variants} whileHover={{ scale: 1.015 }}>
-                <Card sx={{ backgroundColor: 'white', borderRadius: '16px', boxShadow: 3 }}>
-                  <CardMedia
-                    component="img"
-                    height="140"
-                    image={member.pic}
-                    alt={member.name}
-                    sx={{ borderRadius: '16px 16px 0 0' }}
-                  />
-                  <CardContent>
-                    <Typography variant="h5" sx={{ color: "#257fb4", fontWeight: 'bold' }}>
-                      {member.name}
-                    </Typography>
-                    <Typography variant="body2" sx={{ color: "#006984" }}>
-                      {member.designation}
-                    </Typography>
-                  </CardContent>
-                </Card>
-              </motion.div>
-            </div>
+            <motion.div key={index} variants={variants} whileHover={{ scale: 1.015 }} className="w-52"> {/* Set a fixed width for cards */}
+              <Card sx={{ backgroundColor: 'white', borderRadius: '16px', boxShadow: 3 }}>
+                <CardMedia
+                  component="img"
+                  height="140"
+                  image={member.pic}
+                  alt={member.name}
+                  sx={{ borderRadius: '16px 16px 0 0' }}
+                />
+                <CardContent>
+                  <Typography variant="h5" sx={{ color: "#257fb4", fontWeight: 'bold' }}>
+                    {member.name}
+                  </Typography>
+                  <Typography variant="body2" sx={{ color: "#006984" }}>
+                    {member.designation}
+                  </Typography>
+                </CardContent>
+              </Card>
+            </motion.div>
           ))}
         </div>
       </div>
