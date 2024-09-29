@@ -10,7 +10,7 @@ function App() {
   return (
     <div className="bg-white min-h-screen flex flex-col">
       <Router>
-        <NavBarComponent />
+        {/* <NavBarComponent /> */}
         <div className="flex-grow"> {/* Ensures the main content takes up remaining space */}
           <Routes>
             <Route path="/" element={<Home />} />
@@ -19,7 +19,7 @@ function App() {
             <Route path="/contact-us" element={<ContactUs />} />
           </Routes>
         </div>
-        <FooterComponent />
+        {/* <FooterComponent /> */}
       </Router>
     </div>
   );
