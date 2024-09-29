@@ -42,6 +42,11 @@ const Sponsor = () => {
     whiteSpace: 'nowrap',
   };
 
+  const wrapperStyle = {
+    display: 'flex',
+    marginLeft: '20px', // Apply left margin here
+  };
+
   return (
     <div style={{ overflow: 'hidden', width: '100%' }}>
       <style>
@@ -70,29 +75,31 @@ const Sponsor = () => {
         Our Sponsors
       </h2>
       <div style={scrollContainerStyle}>
-        {!imagesLoaded
-          ? Array(8).fill(0).map((_, index) => (
-              <div key={index} className="placeholder" />
-            ))
-          : sponsors.map((sponsor, index) => (
-              <img
-                key={index}
-                src={sponsor}
-                alt={`sponsor-${index}`}
-                className="sponsor-image"
-                loading="lazy"
-              />
-            ))}
-        {/* Duplicate sponsors for seamless scrolling */}
-        {imagesLoaded && sponsors.map((sponsor, index) => (
-          <img
-            key={index + sponsors.length}
-            src={sponsor}
-            alt={`sponsor-${index + sponsors.length}`}
-            className="sponsor-image"
-            loading="lazy"
-          />
-        ))}
+        <div style={wrapperStyle}>
+          {!imagesLoaded
+            ? Array(8).fill(0).map((_, index) => (
+                <div key={index} className="placeholder" />
+              ))
+            : sponsors.map((sponsor, index) => (
+                <img
+                  key={index}
+                  src={sponsor}
+                  alt={`sponsor-${index}`}
+                  className="sponsor-image"
+                  loading="lazy"
+                />
+              ))}
+          {/* Duplicate sponsors for seamless scrolling */}
+          {imagesLoaded && sponsors.map((sponsor, index) => (
+            <img
+              key={index + sponsors.length}
+              src={sponsor}
+              alt={`sponsor-${index + sponsors.length}`}
+              className="sponsor-image"
+              loading="lazy"
+            />
+          ))} 
+        </div>
       </div>
     </div>
   );

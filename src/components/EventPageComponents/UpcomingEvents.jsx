@@ -1,14 +1,14 @@
-import React from 'react'
-import { motion } from 'framer-motion'
-import { MapPin, Users } from 'lucide-react'
-import Logo1 from "../../assets/images/events/codersCup.png"
-import Logo2 from "../../assets/images/events/developerDay.jpeg"
+import React from 'react';
+import { motion } from 'framer-motion';
+import { MapPin, Users } from 'lucide-react';
+import Logo1 from "../../assets/images/events/codersCup.png";
+import Logo2 from "../../assets/images/events/developerDay.jpeg";
 
 const events = [
   {
     id: 1,
     name: "Coders Cup 2024",
-    description: "The Coders' Cup is an intra-FAST programming competition that stands as the epitome of where rising minds polish and develop their coding abilities while debugging their very own creations",
+    description: "The Coders' Cup is an intra-FAST programming competition that stands as the epitome of where rising minds polish and develop their coding abilities while debugging their very own creations.",
     date: "2024-11-15",
     location: "Fast NUCES, Karachi",
     attendees: 2000,
@@ -25,15 +25,15 @@ const events = [
     logo: Logo2,
     registrationLink: "https://www.greenearth.com/register"
   }
-]
+];
 
-const EventCard = ({ event }) => (
-  <motion.div 
+const EventCard = React.memo(({ event }) => (
+  <motion.div
     className="bg-white rounded-2xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-2xl"
     initial={{ opacity: 0, y: 50 }}
     animate={{ opacity: 1, y: 0 }}
     transition={{ duration: 0.5 }}
-    whileHover={{ y: -5, scale: 1.03 }} // Added scale effect on hover
+    whileHover={{ y: -5, scale: 1.03 }}
     whileTap={{ scale: 0.95 }}
   >
     <div className="relative">
@@ -54,30 +54,31 @@ const EventCard = ({ event }) => (
         </div>
       </div>
       <a href={event.registrationLink} target="_blank" rel="noopener noreferrer" className="block">
-        <motion.button 
+        <motion.button
           className="w-full bg-[#0b466d] hover:bg-[#257fb5] text-white font-bold py-3 px-6 rounded-full transition duration-300 ease-in-out"
-          whileHover={{ scale: 1.05, rotate: 2 }} // Added rotation effect on hover
+          whileHover={{ scale: 1.05, rotate: 2 }}
           whileTap={{ scale: 0.95 }}
+          aria-label={`Register for ${event.name}`}
         >
           Register Now
         </motion.button>
       </a>
     </div>
   </motion.div>
-)
+));
 
 export default function UpcomingEvents() {
   return (
     <section className="bg-gradient-to-br from-gray-50 to-white py-20 pl-14">
       <div className="container mx-auto px-6">
-        <motion.h2 
+        <motion.h2
           className="font-extrabold text-4xl text-center lg:text-7xl text-[#006984] mb-12 relative"
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
           Upcoming Events
-          <motion.span 
+          <motion.span
             className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-[#257fb5]"
             initial={{ width: 0 }}
             transition={{ delay: 0.5, duration: 0.5 }}
@@ -97,5 +98,5 @@ export default function UpcomingEvents() {
         </div>
       </div>
     </section>
-  )
+  );
 }

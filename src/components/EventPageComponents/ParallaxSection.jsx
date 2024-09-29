@@ -1,9 +1,9 @@
-import React, { useState } from 'react'
-import about1 from "../../assets/images/events/about-1.webp"
-import about2 from "../../assets/images/events/about-2.webp"
-import about3 from "../../assets/images/events/about-7.webp"
-import about4 from "../../assets/images/events/about-8.webp"
-import { X } from 'lucide-react'
+import React, { useState } from 'react';
+import about1 from "../../assets/images/events/about-1.webp";
+import about2 from "../../assets/images/events/about-2.webp";
+import about3 from "../../assets/images/events/about-7.webp";
+import about4 from "../../assets/images/events/about-8.webp";
+import { X } from 'lucide-react';
 
 const events = [
   { id: 1, title: "Summer Music Festival", date: "2023-07-15", imageUrl: about1, height: 300 },
@@ -16,7 +16,7 @@ const events = [
   { id: 9, title: "Startup Expo", date: "2024-03-12", imageUrl: about4, height: 400 },
   { id: 11, title: "Procom 2024", date: "2024-04-05", imageUrl: about1, height: 400 },
   { id: 12, title: "Developer Day 2024", date: "2024-04-05", imageUrl: about2, height: 300 },
-]
+];
 
 const Modal = ({ isOpen, onClose, imageUrl, title }) => {
   if (!isOpen) return null;
@@ -57,23 +57,7 @@ export default function ParallaxSection() {
       <h1 className="mainh1 font-extrabold text-5xl text-center lg:text-7xl text-[#006984] pl-6 pb-8">Past Events</h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 auto-rows-[200px]">
         {events.map((event) => (
-          <div
-            key={event.id}
-            className="relative group overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 ease-in-out cursor-pointer"
-            style={{
-              gridRow: `span ${Math.ceil(event.height / 100)}`,
-              backgroundImage: `url(${event.imageUrl})`,
-              backgroundSize: 'cover',
-              backgroundAttachment: 'fixed',
-              backgroundPosition: 'center',
-            }}
-            onDoubleClick={() => openModal(event)}
-          >
-            <div className="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out flex flex-col justify-end p-4">
-              <h2 className="text-white text-xl font-semibold">{event.title}</h2>
-              <p className="text-white text-sm">{event.date}</p>
-            </div>
-          </div>
+          <EventCard key={event.id} event={event} onClick={openModal} />
         ))}
       </div>
       <Modal
@@ -83,5 +67,24 @@ export default function ParallaxSection() {
         title={selectedEvent?.title}
       />
     </div>
-  )
+  );
 }
+
+const EventCard = ({ event, onClick }) => (
+  <div
+    className="relative group overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 ease-in-out cursor-pointer"
+    style={{
+      gridRow: `span ${Math.ceil(event.height / 100)}`,
+      backgroundImage: `url(${event.imageUrl})`,
+      backgroundSize: 'cover',
+      backgroundAttachment: 'fixed',
+      backgroundPosition: 'center',
+    }}
+    onClick={() => onClick(event)} // Changed to single click
+  >
+    <div className="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out flex flex-col justify-end p-4">
+      <h2 className="text-white text-xl font-semibold">{event.title}</h2>
+      <p className="text-white text-sm">{event.date}</p>
+    </div>
+  </div>
+);

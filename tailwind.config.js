@@ -9,7 +9,6 @@ export default {
   darkMode: "class",
   theme: {
     extend: {
-      // Remove animation and keyframes since they are now handled inline
     },
   },
   plugins: [

@@ -4,9 +4,9 @@ import UpcomingEvents from "../components/EventPageComponents/UpcomingEvents";
 
 export function Events() {
   return (
-    <div>
+    <>
       <UpcomingEvents/>
       <ParallaxSection />
-    </div>
+    </>
   );
 }
