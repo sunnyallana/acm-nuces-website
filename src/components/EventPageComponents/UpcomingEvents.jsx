@@ -71,7 +71,7 @@ export default function UpcomingEvents() {
     <section className="bg-gradient-to-br from-gray-50 to-white py-20 pl-14">
       <div className="container mx-auto px-6">
         <motion.h2 
-          className="font-extrabold text-5xl text-center lg:text-7xl text-[#006984] mb-12 relative"
+          className="font-extrabold text-4xl text-center lg:text-7xl text-[#006984] mb-12 relative"
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}

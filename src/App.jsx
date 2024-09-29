@@ -11,7 +11,7 @@ function App() {
     <div className="bg-white min-h-screen flex flex-col">
       <Router>
         <NavBarComponent />
-        <div className="flex-grow"> {/* Ensures the main content takes up remaining space */}
+        <div className="flex-grow"> 
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/events" element={<Events />} />
