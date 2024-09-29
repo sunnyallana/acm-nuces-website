@@ -24,7 +24,8 @@ const FacultyCard = ({ faculty }) => {
         className="w-full h-72 bg-cover bg-center rounded-lg mb-4"
         style={{
           backgroundImage: `url(${faculty.pic})`,
-          backgroundColor: "#257fb5", // fallback background color
+          backgroundColor: "#257fb5", // Fallback background color
+          backgroundPosition: 'center top', // Align the image to the top
         }}
       ></div>
 

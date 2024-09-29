@@ -1,18 +1,20 @@
 import React from "react";
 import FacultyCard from "./FacultyCard";
 import { motion } from "framer-motion";
+import facultyHead from "../../assets/images/faculty/Dr-Anam-Qureshi-Faculty-Head.png";
+import facultyCoHead from "../../assets/images/faculty/Sir-Abuzar-Zafar-Faculty-CoHead.png";
 
 const FacultyList = () => {
   const facultyData = [
     {
-      name: "Dr. John Doe",
-      designation: "Professor of Computer Science",
-      pic: "https://example.com/john-doe.jpg",
+      name: "Dr. Anam Qureshi",
+      designation: "Faculty Head",
+      pic: facultyHead,
     },
     {
-      name: "Dr. Jane Smith",
-      designation: "Associate Professor of Math",
-      pic: "https://example.com/jane-smith.jpg",
+      name: "Sir Abuzar Ali",
+      designation: "Faculty Co-Head",
+      pic: facultyCoHead,
     },
   ];
 
