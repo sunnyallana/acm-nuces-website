@@ -4,7 +4,7 @@ const ExComCard = ({ imgUrl, title, name }) => {
   return (
     <div
       className={`
-        relative mt-10 mb-10 bg-gradient-to-b from-[#0075AF] to-[#003149]
+        relative mt-10 mb-10 bg-white
         min-h-[160px] w-[160px]
         md:h-[300px] md:w-[300px]
         lg:h-[325px] lg:w-[325px]
@@ -16,22 +16,20 @@ const ExComCard = ({ imgUrl, title, name }) => {
       <div className="relative flex justify-center">
         <img
           className={`
-            object-cover w-32 h-32 md:w-60 md:h-60 rounded-full
-            mx-auto transform transition-all duration-300 ease-in-out hover:scale-110 hover:shadow-xl
+            object-cover w-32 h-32 md:w-56 md:h-56 rounded-full
+            mx-auto transform transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-xl
             mt-[-80px] md:mt-[-100px]
           `}
           src={imgUrl}
           alt={`${title} ${name}`}
         />
-        {/* Floating Animation Effect */}
-        <div className="absolute w-32 h-32 md:w-60 md:h-60 rounded-full bg-gradient-to-r from-blue-500 to-indigo-600 opacity-50 blur-xl group-hover:blur-none transition duration-300"></div>
       </div>
 
       {/* Text Content */}
       <div
         className={`
           text-center mt-5 flex flex-col justify-center items-center
-          text-white transition-opacity duration-300 opacity-90 hover:opacity-100
+          text-[#006984] transition-opacity duration-300 opacity-90 hover:opacity-100
         `}
       >
         <p

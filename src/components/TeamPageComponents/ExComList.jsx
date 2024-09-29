@@ -52,7 +52,7 @@ const ExComList = () => {
       {teamsData.map((team, index) => (
         <div key={index} className="w-full text-center mb-12">
           <motion.h3
-            className="text-2xl md:text-3xl lg:text-4xl text-[#005670] font-bold mb-6"
+            className="text-2xl md:text-3xl lg:text-4xl text-[#005670] font-bold mb-12"
             variants={headingVariants}
             initial="hidden"
             animate="visible"
