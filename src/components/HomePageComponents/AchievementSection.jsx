@@ -6,30 +6,10 @@ export function AchievementSection() {
   const sectionRef = useRef(null);
 
   const achievementProps = [
-    {
-      id: 1,
-      count: 500,
-      title: "Members",
-      description: "Active Student Participants"
-    },
-    {
-      id: 2,
-      count: 20,
-      title: "Competitions",
-      description: "Organized annually"
-    },
-    {
-      id: 3,
-      count: 15,
-      title: "Years",
-      description: "Of Excellence"
-    },
-    {
-      id: 4,
-      count: 100,
-      title: "Growth",
-      description: "Year-over-year impact"
-    }
+    { id: 1, count: 500, title: "Members", description: "Active Student Participants" },
+    { id: 2, count: 20, title: "Competitions", description: "Organized annually" },
+    { id: 3, count: 15, title: "Years", description: "Of Excellence" },
+    { id: 4, count: 100, title: "Growth", description: "Year-over-year impact" },
   ];
 
   useEffect(() => {
@@ -54,21 +34,21 @@ export function AchievementSection() {
     };
   }, []);
 
-  const achievementComponents = achievementProps.map((achievement) => (
-    <Achievements
-      key={achievement.id}
-      count={achievement.count}
-      title={achievement.title}
-      description={achievement.description}
-      startCounting={isVisible}
-    />
-  ));
-
   return (
     <section ref={sectionRef} className='mt-10 mx-6 ml-20'>
-      <h2 className='text-4xl md:text-6xl text-[#006984] font-bold mb-5 text-center '>Our Achievements</h2>
+      <h2 className='text-4xl md:text-6xl text-[#006984] font-bold mb-5 text-center'>
+        Our Achievements
+      </h2>
       <div className='flex justify-around gap-4 p-4 flex-wrap'>
-        {achievementComponents}
+        {achievementProps.map(({ id, count, title, description }) => (
+          <Achievements
+            key={id}
+            count={count}
+            title={title}
+            description={description}
+            startCounting={isVisible}
+          />
+        ))}
       </div>
     </section>
   );
