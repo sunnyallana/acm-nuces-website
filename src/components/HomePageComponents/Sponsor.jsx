@@ -20,24 +20,47 @@ const Sponsor = () => {
     Sponsor8,
   ];
 
+  const scrollContainerStyle = {
+    display: 'flex',
+    animation: 'scroll 30s linear infinite',
+    whiteSpace: 'nowrap',
+  };
+
+  const keyframes = `
+    @keyframes scroll {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(-50%); // Adjust for the duplicated images
+      }
+    }
+  `;
+
+  // Create a style element for keyframes
+  const styleSheet = document.styleSheets[0];
+  styleSheet.insertRule(keyframes, styleSheet.cssRules.length);
+
   return (
-    <div className="flex overflow-hidden w-full">
-      <div className="scroll-container flex space-x-10 animate-scroll">
+    <div style={{ overflow: 'hidden', width: '100%' }}>
+      <div style={scrollContainerStyle}>
         {sponsors.map((sponsor, index) => (
           <img
             key={index}
             src={sponsor}
             alt={`sponsor-${index}`}
-            className="w-24 h-24 object-contain"
+            style={{ width: '96px', height: '96px', objectFit: 'contain', margin: '0 10px' }}
+            loading="lazy"
           />
         ))}
-        {/* Duplicate the items to create the infinite scroll effect */}
+        {/* Duplicate sponsors for seamless scrolling */}
         {sponsors.map((sponsor, index) => (
           <img
             key={index + sponsors.length}
             src={sponsor}
             alt={`sponsor-${index + sponsors.length}`}
-            className="w-24 h-24 object-contain"
+            style={{ width: '96px', height: '96px', objectFit: 'contain', margin: '0 10px' }}
+            loading="lazy"
           />
         ))}
       </div>

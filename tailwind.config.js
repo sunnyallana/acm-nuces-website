@@ -1,6 +1,4 @@
-const {
-  default: flattenColorPalette,
-} = require("tailwindcss/lib/util/flattenColorPalette");
+const { default: flattenColorPalette } = require("tailwindcss/lib/util/flattenColorPalette");
 
 /** @type {import('tailwindcss').Config} */
 export default {
@@ -11,30 +9,22 @@ export default {
   darkMode: "class",
   theme: {
     extend: {
-      animation: {
-        scroll: 'scroll 30s linear infinite', // Updated time to match your scroll speed.
-      },
-      keyframes: {
-        scroll: {
-          '0%': { transform: 'translateX(0)' },
-          '100%': { transform: 'translateX(-50%)' }, // Adjusted for the image scroll effect.
-        },
-      },
+      // Remove animation and keyframes since they are now handled inline
     },
   },
   plugins: [
     require('daisyui'),
     addVariablesForColors,
   ],
-}
+};
 
-// This plugin adds each Tailwind color as a global CSS variable, e.g. var(--gray-200).
+// Function to add Tailwind colors as CSS variables
 function addVariablesForColors({ addBase, theme }) {
-  let allColors = flattenColorPalette(theme("colors"));
-  let newVars = Object.fromEntries(
+  const allColors = flattenColorPalette(theme("colors"));
+  const newVars = Object.fromEntries(
     Object.entries(allColors).map(([key, val]) => [`--${key}`, val])
   );
- 
+
   addBase({
     ":root": newVars,
   });

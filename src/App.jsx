@@ -19,7 +19,7 @@ function App() {
             <Route path="/contact-us" element={<ContactUs />} />
           </Routes>
         </div>
-        {/* <FooterComponent /> */}
+        <FooterComponent />
       </Router>
     </div>
   );

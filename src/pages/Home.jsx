@@ -12,7 +12,7 @@ export function Home() {
   return (
     <div>
       <HeroSectionComponent />
-      {/* <CardSection/> */}
+      <CardSection/>
       <Mission/>
       <AboutFast/>
       <AboutACM/>
