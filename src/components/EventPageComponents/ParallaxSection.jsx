@@ -1,21 +1,25 @@
 import React, { useState } from 'react';
-import about1 from "../../assets/images/events/about-1.webp";
-import about2 from "../../assets/images/events/about-2.webp";
-import about3 from "../../assets/images/events/about-7.webp";
-import about4 from "../../assets/images/events/about-8.webp";
+import about1 from "../../assets/images/events/event1.jpg";
+import about2 from "../../assets/images/events/event2.jpg";
+import about3 from "../../assets/images/events/event3.jpg";
+import about4 from "../../assets/images/events/event4.jpg";
+import about5 from "../../assets/images/events/event5.jpg";
+import about6 from "../../assets/images/events/event6.jpg";
 import { X } from 'lucide-react';
 
 const events = [
-  { id: 1, title: "Summer Music Festival", date: "2023-07-15", imageUrl: about1, height: 300 },
-  { id: 2, title: "Tech Conference", date: "2023-08-22", imageUrl: about2, height: 400 },
-  { id: 3, title: "Art Exhibition", date: "2023-09-10", imageUrl: about3, height: 350 },
-  { id: 4, title: "Food Tasting", date: "2023-10-05", imageUrl: about4, height: 300 },
-  { id: 6, title: "Winter Wonderland", date: "2023-12-20", imageUrl: about1, height: 300 },
-  { id: 7, title: "Charity Run", date: "2024-01-15", imageUrl: about2, height: 400 },
-  { id: 8, title: "Film Festival", date: "2024-02-25", imageUrl: about3, height: 400 },
-  { id: 9, title: "Startup Expo", date: "2024-03-12", imageUrl: about4, height: 400 },
-  { id: 11, title: "Procom 2024", date: "2024-04-05", imageUrl: about1, height: 400 },
-  { id: 12, title: "Developer Day 2024", date: "2024-04-05", imageUrl: about2, height: 300 },
+  { id: 1, title: "Developers Day 2023", date: "2023-07-15", imageUrl: about1, height: 300 },
+  { id: 2, title: "Developers Day 2023", date: "2023-08-22", imageUrl: about2, height: 400 },
+  { id: 3, title: "Developers Day 2023", date: "2023-09-10", imageUrl: about3, height: 350 },
+  { id: 4, title: "Coders Cup 2023", date: "2023-10-05", imageUrl: about4, height: 300 },
+  { id: 6, title: "Coders Cup 2023", date: "2023-12-20", imageUrl: about5, height: 300 },
+  { id: 7, title: "Coders Cup 2023", date: "2024-01-15", imageUrl: about6, height: 400 },
+  { id: 8, title: "Developers Day 2023", date: "2024-02-25", imageUrl: about1, height: 400 },
+  { id: 9, title: "Developers Day 2023", date: "2024-03-12", imageUrl: about2, height: 400 },
+  { id: 11, title: "Developers Day 2023", date: "2024-04-05", imageUrl: about3, height: 400 },
+  { id: 12, title: "Coders Cup 2023", date: "2024-04-05", imageUrl: about4, height: 300 },
+  { id: 13, title: "Coders Cup 2023", date: "2024-04-05", imageUrl: about5, height: 350 },
+  { id: 14, title: "Coders Cup 2023", date: "2024-04-05", imageUrl: about6, height: 400 },
 ];
 
 const Modal = ({ isOpen, onClose, imageUrl, title }) => {
