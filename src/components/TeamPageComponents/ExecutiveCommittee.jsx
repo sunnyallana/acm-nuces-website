@@ -69,7 +69,7 @@ const ExecutiveCommittee = () => {
         <div className="flex justify-center text-center">
           <div className="sm:max-w-lg">
             <motion.h2
-              className="text-3xl md:text-4xl lg:text-5xl text-[#006984] font-extrabold mb-2 md:mb-8 whitespace-nowrap"
+              className="text-3xl md:text-4xl lg:text-5xl text-[#006984] font-extrabold mb-2 md:mb-8"
               variants={headingVariants}
               initial="hidden"
               animate="visible"
@@ -78,13 +78,13 @@ const ExecutiveCommittee = () => {
             </motion.h2>
           </div>
         </div>
-        <div className="flex justify-center flex-wrap gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center">
           {committeeData.map((member, index) => (
-            <motion.div key={index} variants={variants} whileHover={{ scale: 1.015 }} className="w-52"> {/* Set a fixed width for cards */}
+            <motion.div key={index} variants={variants} whileHover={{ scale: 1.015 }} className="w-72"> {/* Increased width to w-72 */}
               <Card sx={{ backgroundColor: 'white', borderRadius: '16px', boxShadow: 3 }}>
                 <CardMedia
                   component="img"
-                  height="140"
+                  height="180" // Adjusted height
                   image={member.pic}
                   alt={member.name}
                   sx={{ borderRadius: '16px 16px 0 0' }}
