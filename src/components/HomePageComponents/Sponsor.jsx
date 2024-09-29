@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Sponsor1 from "../../assets/images/sponsors/sponsor1.png";
 import Sponsor2 from "../../assets/images/sponsors/sponsor2.png";
 import Sponsor3 from "../../assets/images/sponsors/sponsor3.png";
@@ -9,6 +9,8 @@ import Sponsor7 from "../../assets/images/sponsors/sponsor7.png";
 import Sponsor8 from "../../assets/images/sponsors/sponsor8.png";
 
 const Sponsor = () => {
+  const [imagesLoaded, setImagesLoaded] = useState(false);
+
   const sponsors = [
     Sponsor1,
     Sponsor2,
@@ -20,46 +22,72 @@ const Sponsor = () => {
     Sponsor8,
   ];
 
+  useEffect(() => {
+    const imgPromises = sponsors.map((src) => {
+      return new Promise((resolve) => {
+        const img = new Image();
+        img.src = src;
+        img.onload = resolve; // Resolve when the image is loaded
+      });
+    });
+
+    Promise.all(imgPromises).then(() => {
+      setImagesLoaded(true); // Set state to true when all images are loaded
+    });
+  }, []);
+
   const scrollContainerStyle = {
     display: 'flex',
     animation: 'scroll 30s linear infinite',
     whiteSpace: 'nowrap',
   };
 
-  const keyframes = `
-    @keyframes scroll {
-      0% {
-        transform: translateX(0);
-      }
-      100% {
-        transform: translateX(-50%); // Adjust for the duplicated images
-      }
-    }
-  `;
-
-  // Create a style element for keyframes
-  const styleSheet = document.styleSheets[0];
-  styleSheet.insertRule(keyframes, styleSheet.cssRules.length);
-
   return (
     <div style={{ overflow: 'hidden', width: '100%' }}>
+      <style>
+        {`
+          @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); } // Adjust for duplicated images
+          }
+
+          .sponsor-image {
+            width: 96px;
+            height: 96px;
+            object-fit: contain;
+            margin: 0 10px;
+          }
+
+          .placeholder {
+            width: 96px;
+            height: 96px;
+            margin: 0 10px;
+            background-color: #f0f0f0; /* Light gray placeholder */
+          }
+        `}
+      </style>
+
       <div style={scrollContainerStyle}>
-        {sponsors.map((sponsor, index) => (
-          <img
-            key={index}
-            src={sponsor}
-            alt={`sponsor-${index}`}
-            style={{ width: '96px', height: '96px', objectFit: 'contain', margin: '0 10px' }}
-            loading="lazy"
-          />
-        ))}
+        {!imagesLoaded
+          ? Array(8).fill(0).map((_, index) => (
+              <div key={index} className="placeholder" />
+            ))
+          : sponsors.map((sponsor, index) => (
+              <img
+                key={index}
+                src={sponsor}
+                alt={`sponsor-${index}`}
+                className="sponsor-image"
+                loading="lazy"
+              />
+            ))}
         {/* Duplicate sponsors for seamless scrolling */}
-        {sponsors.map((sponsor, index) => (
+        {imagesLoaded && sponsors.map((sponsor, index) => (
           <img
             key={index + sponsors.length}
             src={sponsor}
             alt={`sponsor-${index + sponsors.length}`}
-            style={{ width: '96px', height: '96px', objectFit: 'contain', margin: '0 10px' }}
+            className="sponsor-image"
             loading="lazy"
           />
         ))}
