@@ -125,17 +125,10 @@ const Text = styled.span`
   white-space: nowrap; 
 `;
 
-const links = [
-  { to: "/", icon: faHome, label: "Home" },
-  { to: "/events", icon: faCalendarAlt, label: "Events" },
-  { to: "/our-team", icon: faUsers, label: "Team" },
-  { to: "/contact-us", icon: faPhone, label: "Contact" },
-];
-
 const NavBarComponent = () => {
   const [click, setClick] = useState(false);
   const handleClick = () => setClick(!click);
-  
+
   const handleLinkClick = () => {
     window.scrollTo(0, 0); // Scroll to top when a link is clicked
     setClick(false); // Close the sidebar
@@ -149,12 +142,22 @@ const NavBarComponent = () => {
           <img src={logo} alt="logo" />
         </Logo>
         <SlickBar $clicked={click}>
-          {links.map(({ to, icon, label }) => (
-            <Item key={label} onClick={handleLinkClick} to={to} clicked={click}>
-              <FontAwesomeIcon icon={icon} />
-              <Text $clicked={click}>{label}</Text>
-            </Item>
-          ))}
+          <Item onClick={handleLinkClick} exact to="/" clicked={click}>
+            <FontAwesomeIcon icon={faHome} />
+            <Text $clicked={click}>Home</Text>
+          </Item>
+          <Item onClick={handleLinkClick} to="/events" clicked={click}>
+            <FontAwesomeIcon icon={faCalendarAlt} />
+            <Text $clicked={click}>Events</Text>
+          </Item>
+          <Item onClick={handleLinkClick} to="/our-team" clicked={click}>
+            <FontAwesomeIcon icon={faUsers} />
+            <Text $clicked={click}>Team</Text>
+          </Item>
+          <Item onClick={handleLinkClick} to="/contact-us" clicked={click}>
+            <FontAwesomeIcon icon={faPhone} />
+            <Text $clicked={click}>Contact</Text>
+          </Item>
         </SlickBar>
       </SidebarContainer>
     </Container>
