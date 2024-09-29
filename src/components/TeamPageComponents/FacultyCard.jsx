@@ -4,11 +4,7 @@ import { motion } from "framer-motion";
 const FacultyCard = ({ faculty }) => {
   return (
     <motion.div
-      className="bg-white w-64 h-96 rounded-lg shadow-lg p-4 flex flex-col justify-between transition duration-300 ease-in-out transform hover:-translate-y-2 hover:shadow-2xl"
-      initial={{ opacity: 0, y: 50 }} // Initial state when the card is hidden
-      animate={{ opacity: 1, y: 0 }} // Final state when the card is visible
-      transition={{ duration: 0.5, ease: "easeOut" }} // Animation duration and easing
-      whileHover={{ scale: 1.05 }} // Slight scale on hover
+      className="bg-white w-full md:w-64 h-96 rounded-lg shadow-lg p-4 flex flex-col justify-between transition duration-300 ease-in-out transform hover:-translate-y-2 hover:shadow-2xl"
     >
       {/* Dots Section */}
       <div className="flex p-2 gap-1">
