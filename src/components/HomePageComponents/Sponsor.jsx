@@ -66,7 +66,9 @@ const Sponsor = () => {
           }
         `}
       </style>
-
+      <h2 className='text-4xl md:text-6xl text-[#006984] font-bold mt-5 mb-5 text-center'>
+        Our Sponsors
+      </h2>
       <div style={scrollContainerStyle}>
         {!imagesLoaded
           ? Array(8).fill(0).map((_, index) => (

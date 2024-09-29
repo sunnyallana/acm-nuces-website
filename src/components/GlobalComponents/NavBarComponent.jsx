@@ -7,7 +7,7 @@ import logo from "../../assets/acm-logo-png.png";
 
 const Container = styled.div`
   position: fixed;
-  z-index: 11; /* Increased z-index */
+  z-index: 999;
 `;
 
 const Button = styled.button`
