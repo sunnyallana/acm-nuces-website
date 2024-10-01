@@ -55,7 +55,7 @@ const Card = ({ children, isHovered }) => {
         isHovered ? "shadow-2xl" : "shadow-lg"
       )}
     >
-      <div className="relative z-50">
+      <div className="relative z-1">
         {children}
       </div>
     </div>
