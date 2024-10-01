@@ -29,7 +29,7 @@ const Navbar2 = () => {
 
   return (
     <nav
-      className={`fixed bottom-0 left-0 right-0 mx-auto bg-white border-t border-gray-300 shadow-xl z-50 mb-4 w-[90%] sm:w-[30%] rounded-full px-3 sm:hidden transition-transform duration-300 ease-in-out ${
+      className={`fixed bottom-0 left-0 right-0 mx-auto bg-white border-t border-gray-300 shadow-xl z-100 mb-4 w-[90%] sm:w-[30%] rounded-full px-3 sm:hidden transition-transform duration-300 ease-in-out ${
         isVisible ? "translate-y-0" : "translate-y-full"
       }`}
     >
