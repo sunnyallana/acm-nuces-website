@@ -8,6 +8,10 @@ import logo from "../../assets/acm-logo-png.png";
 const Container = styled.div`
   position: fixed;
   z-index: 999;
+  height: 100vh; /* Full screen height to allow vertical centering */
+  width: 100%; /* Ensure the navbar container takes full width */
+  display: flex; /* Flexbox to align content */
+  align-items: center; /* Vertically center the content */
   @media (max-width: 640px) { /* Tailwind sm breakpoint */
     display: none; /* Hide on small screens */
   }
@@ -16,17 +20,16 @@ const Container = styled.div`
 const SidebarContainer = styled.div`
   background-color: #f0f0f0; 
   width: 4rem; 
-  height: 80vh;
-  margin-top: 1rem;
   border-radius: 0 30px 30px 0;
   padding: 0; 
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center; /* Center the content */
   position: relative;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); 
   transition: width 0.5s ease;
+  height: auto; /* Ensure height fits the content dynamically */
 
   &:hover {
     width: 12rem; /* Expand to the same size on hover */
@@ -54,9 +57,6 @@ const SlickBar = styled.ul`
   background-color: #f0f0f0; 
   padding: 0; 
   margin: 0; 
-  position: absolute;
-  top: 6rem; 
-  left: 0;
   width: 100%; 
   border-radius: 0 30px 30px 0;
 `;
