@@ -28,12 +28,13 @@ const cardData = [
     afterBgImage: ex1,
   },
   {
-    name: "1,000+ Active Student Members",
-    description: "",
-    bgImage: grow1, // Adjust image as necessary
+    name: "1,000+",
+    description: "Active Student Members",
+    bgImage: grow1,
     afterBgImage: grow2,
   },
 ];
+
 
 export function CardSection() {
   return (

@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from "../../assets/acm.svg"; // Ensure the path to the SVG logo is correct
+import logo from "../../assets/acm-logo-complete.png"; // Update the path to the PNG logo
 
 const Loader = () => {
   return (
@@ -13,7 +13,7 @@ const Loader = () => {
 
         {/* Static image in the center */}
         <div className="absolute flex items-center justify-center w-64 h-64">
-          <img src={logo} alt="Logo" className="w-48 h-48" /> {/* Increased size for the logo */}
+          <img src={logo} alt="acm-nuces-logo" className="w-48 h-48" /> {/* Increased size for the logo */}
         </div>
       </div>
     </div>
