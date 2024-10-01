@@ -28,7 +28,7 @@ export function CardDemo({ name, description, bgImage, afterBgImage }) {
         {/* Full-width Black Overlay Section */}
         <div className="absolute bottom-0 left-0 right-0 z-20 bg-black bg-opacity-50 p-4">
           <h1 className="font-bold text-xl md:text-3xl text-gray-50">{name}</h1>
-          <p className="font-normal text-base text-gray-50 my-4">
+          <p className="font-normal text-base text-gray-50">
             {description}
           </p>
         </div>
