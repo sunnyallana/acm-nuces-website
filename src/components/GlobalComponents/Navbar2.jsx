@@ -10,10 +10,10 @@ const Navbar2 = () => {
   const handleScroll = () => {
     if (typeof window !== "undefined") {
       if (window.scrollY > lastScrollY) {
-        // Scrolling down
+        
         setIsVisible(false);
       } else {
-        // Scrolling up
+        
         setIsVisible(true);
       }
       setLastScrollY(window.scrollY);

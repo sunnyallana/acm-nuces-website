@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import styled from "styled-components";
 import { NavLink } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -10,40 +10,6 @@ const Container = styled.div`
   z-index: 999;
   @media (max-width: 640px) { /* Tailwind sm breakpoint */
     display: none; /* Hide on small screens */
-  }
-`;
-
-const Button = styled.button`
-  background-color: var(--black);
-  border: none;
-  width: 3rem; 
-  height: 3rem; 
-  border-radius: 50%;
-  margin: 0.5rem 0 0 0.5rem;
-  cursor: pointer;
-  display: flex;
-  justify-content: center; 
-  align-items: center; 
-  position: relative;
-
-  &::before,
-  &::after {
-    content: "";
-    background-color: var(--white);
-    height: 3px; 
-    width: 1.5rem; 
-    position: absolute;
-    transition: all 0.3s ease;
-  }
-
-  &::before {
-    top: ${(props) => (props.$clicked ? "1.5rem" : "1rem")};
-    transform: ${(props) => (props.$clicked ? "rotate(45deg)" : "rotate(0)")}; 
-  }
-
-  &::after {
-    top: ${(props) => (props.$clicked ? "1.5rem" : "1.5rem")};
-    transform: ${(props) => (props.$clicked ? "rotate(-45deg)" : "rotate(0)")}; 
   }
 `;
 
@@ -60,6 +26,11 @@ const SidebarContainer = styled.div`
   justify-content: space-between;
   position: relative;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); 
+  transition: width 0.5s ease;
+
+  &:hover {
+    width: 12rem; /* Expand to the same size on hover */
+  }
 `;
 
 const Logo = styled.div`
@@ -86,31 +57,32 @@ const SlickBar = styled.ul`
   position: absolute;
   top: 6rem; 
   left: 0;
-  width: ${(props) => (props.$clicked ? "12rem" : "4rem")}; 
-  transition: all 0.5s ease;
+  width: 100%; 
   border-radius: 0 30px 30px 0;
 `;
 
-const Item = styled(({ clicked, exact, ...props }) => <NavLink {...props} />)`
+const Item = styled(({ exact, ...props }) => <NavLink {...props} />)`
   text-decoration: none;
   color: black; 
   width: 100%;
   padding: 1rem 0; 
   cursor: pointer;
   display: flex;
-  justify-content: center; 
-  align-items: center; 
-
-  padding-left: ${(props) => (props.clicked ? "1rem" : "0")}; 
+  justify-content: flex-start; /* Align items to the left */
+  align-items: center;
+  padding-left: 1rem; /* Add padding to the left for better spacing */
+  transition: background-color 0.3s, padding-left 0.3s ease;
 
   &:hover {
     background-color: rgba(0, 0, 255, 0.1); 
-    border-right: 4px solid blue; 
+    border-right: 4px solid #0b466d; 
+    padding-left: 1.5rem; /* Slightly increase padding on hover */
   }
 
   svg {
     width: 1.5rem; 
     height: auto;
+    margin-right: 0.75rem; /* Add margin to the right of the icon */
     filter: invert(0%); 
     transition: filter 0.3s ease;
 
@@ -121,45 +93,45 @@ const Item = styled(({ clicked, exact, ...props }) => <NavLink {...props} />)`
 `;
 
 const Text = styled.span`
-  width: ${(props) => (props.$clicked ? "100%" : "0")};
+  width: 0; 
   overflow: hidden;
-  margin-left: ${(props) => (props.$clicked ? "1rem" : "0")}; 
+  margin-left: 0; 
   transition: all 0.3s ease;
   white-space: nowrap; 
+
+  ${SidebarContainer}:hover & {
+    width: 100%;
+    margin-left: 0.5rem; /* Adjust margin for smooth text reveal */
+  }
 `;
 
 const NavBarComponent = () => {
-  const [click, setClick] = useState(false);
-  const handleClick = () => setClick(!click);
-
   const handleLinkClick = () => {
     window.scrollTo(0, 0); // Scroll to top when a link is clicked
-    setClick(false); // Close the sidebar
   };
 
   return (
     <Container>
-      <Button $clicked={click} onClick={handleClick}></Button>
       <SidebarContainer>
         <Logo>
           <img src={logo} alt="logo" />
         </Logo>
-        <SlickBar $clicked={click}>
-          <Item onClick={handleLinkClick} exact to="/" clicked={click}>
+        <SlickBar>
+          <Item onClick={handleLinkClick} exact to="/">
             <FontAwesomeIcon icon={faHome} />
-            <Text $clicked={click}>Home</Text>
+            <Text>Home</Text>
           </Item>
-          <Item onClick={handleLinkClick} to="/events" clicked={click}>
+          <Item onClick={handleLinkClick} to="/events">
             <FontAwesomeIcon icon={faCalendarAlt} />
-            <Text $clicked={click}>Events</Text>
+            <Text>Events</Text>
           </Item>
-          <Item onClick={handleLinkClick} to="/our-team" clicked={click}>
+          <Item onClick={handleLinkClick} to="/our-team">
             <FontAwesomeIcon icon={faUsers} />
-            <Text $clicked={click}>Team</Text>
+            <Text>Team</Text>
           </Item>
-          <Item onClick={handleLinkClick} to="/contact-us" clicked={click}>
+          <Item onClick={handleLinkClick} to="/contact-us">
             <FontAwesomeIcon icon={faPhone} />
-            <Text $clicked={click}>Contact</Text>
+            <Text>Contact</Text>
           </Item>
         </SlickBar>
       </SidebarContainer>
