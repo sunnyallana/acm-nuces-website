@@ -27,7 +27,7 @@ function App() {
           <Loader />
         ) : (
           <>
-            {/* <NavBarComponent /> */}
+            <NavBarComponent />
             <div className="flex justify-center items-center w-[100%] mx-auto">
               <Navbar2/>
             </div>
