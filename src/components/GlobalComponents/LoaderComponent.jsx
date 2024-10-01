@@ -1,12 +1,20 @@
 import React from 'react';
+import logo from "../../assets/acm-logo-png.png"; // Ensure the path to the logo is correct
 
 const Loader = () => {
   return (
     <div className="flex-col gap-4 w-full flex items-center justify-center min-h-screen">
-      <div className="w-28 h-28 border-8 text-blue-400 text-4xl animate-spin border-gray-300 flex items-center justify-center border-t-blue-400 rounded-full">
-        <svg viewBox="0 0 24 24" fill="currentColor" height="1em" width="1em" className="animate-ping">
-          <path d="M12.001 4.8c-3.2 0-5.2 1.6-6 4.8 1.2-1.6 2.6-2.2 4.2-1.8.913.228 1.565.89 2.288 1.624C13.666 10.618 15.027 12 18.001 12c3.2 0 5.2-1.6 6-4.8-1.2 1.6-2.6 2.2-4.2 1.8-.913-.228-1.565-.89-2.288-1.624C16.337 6.182 14.976 4.8 12.001 4.8zm-6 7.2c-3.2 0-5.2 1.6-6 4.8 1.2-1.6 2.6-2.2 4.2-1.8.913.228 1.565.89 2.288 1.624 1.177 1.194 2.538 2.576 5.512 2.576 3.2 0 5.2-1.6 6-4.8-1.2 1.6-2.6 2.2-4.2 1.8-.913-.228-1.565-.89-2.288-1.624C10.337 13.382 8.976 12 6.001 12z"></path>
-        </svg>
+      <div className="relative flex items-center justify-center">
+        {/* Outer rotating circle */}
+        <div className="w-40 h-40 border-4 border-transparent text-blue-400 animate-spin flex items-center justify-center border-t-[#0b466d] rounded-full">
+          {/* Inner rotating circle */}
+          <div className="w-36 h-36 border-4 border-transparent text-red-400 animate-spin flex items-center justify-center border-t-[#257fb5] rounded-full"></div>
+        </div>
+
+        {/* Static image in the center */}
+        <div className="absolute flex items-center justify-center w-40 h-40">
+          <img src={logo} alt="Logo" className="w-32 h-32" /> {/* Increased size for the logo */}
+        </div>
       </div>
     </div>
   );
