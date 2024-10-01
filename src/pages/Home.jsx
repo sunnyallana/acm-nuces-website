@@ -16,7 +16,7 @@ export function Home() {
       <AboutACM />
       <CardSection />
       {/* <AchievementSection /> */}
-      {/* <Sponsor /> */}
+      <Sponsor />
     </>
   );
 }
