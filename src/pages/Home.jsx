@@ -10,13 +10,13 @@ import { AchievementSection } from '../components/HomePageComponents/Achievement
 export function Home() {
   return (
     <>
-      <HeroSectionComponent />
+      {/* <HeroSectionComponent /> */}
       <CardSection />
       <Mission />
       <AboutFast />
       <AboutACM />
       <AchievementSection />
-      <Sponsor />
+      {/* <Sponsor /> */}
     </>
   );
 }
