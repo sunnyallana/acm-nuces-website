@@ -8,6 +8,9 @@ import logo from "../../assets/acm-logo-png.png";
 const Container = styled.div`
   position: fixed;
   z-index: 999;
+  @media (max-width: 640px) { /* Tailwind sm breakpoint */
+    display: none; /* Hide on small screens */
+  }
 `;
 
 const Button = styled.button`

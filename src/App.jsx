@@ -4,6 +4,7 @@ import { Events } from "./pages/Events";
 import { OurTeam } from "./pages/OurTeam";
 import ContactUs from "./pages/ContactUs";
 import NavBarComponent from "./components/GlobalComponents/NavBarComponent";
+import Navbar2 from "./components/GlobalComponents/Navbar2";
 import FooterComponent from "./components/GlobalComponents/FooterComponent";
 import Loader from "./components/GlobalComponents/LoaderComponent"; // Import the loader
 import { useState, useEffect } from 'react';
@@ -27,6 +28,9 @@ function App() {
         ) : (
           <>
             <NavBarComponent />
+            <div className="flex justify-center items-center w-[100%] mx-auto">
+              <Navbar2/>
+            </div>
             <div className="flex-grow">
               <Routes>
                 <Route path="/" element={<Home />} />
