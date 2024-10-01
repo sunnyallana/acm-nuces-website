@@ -13,7 +13,10 @@ const WavyBackground = ({
 }) => {
   const noise = createNoise3D();
   const canvasRef = useRef(null);
-  let w, h, nt, i, x, ctx;
+  const wRef = useRef(window.innerWidth);
+  const hRef = useRef(window.innerHeight);
+  let nt = 0;
+  let ctx;
 
   const getSpeed = () => {
     switch (speed) {
@@ -29,17 +32,9 @@ const WavyBackground = ({
   const init = () => {
     const canvas = canvasRef.current;
     ctx = canvas.getContext("2d");
-    w = ctx.canvas.width = window.innerWidth;
-    h = ctx.canvas.height = window.innerHeight;
-    ctx.filter = `blur(${blur}px)`;
-    nt = 0;
-
-    window.onresize = function () {
-      w = ctx.canvas.width = window.innerWidth;
-      h = ctx.canvas.height = window.innerHeight;
-      ctx.filter = `blur(${blur}px)`;
-      render();
-    };
+    ctx.filter = `blur(${blur}px}`;
+    wRef.current = ctx.canvas.width = window.innerWidth;
+    hRef.current = ctx.canvas.height = window.innerHeight;
     render();
   };
 
@@ -47,33 +42,42 @@ const WavyBackground = ({
 
   const drawWave = (n) => {
     nt += getSpeed();
-    for (i = 0; i < n; i++) {
+    for (let i = 0; i < n; i++) {
       ctx.beginPath();
       ctx.lineWidth = waveWidth || 50;
       ctx.strokeStyle = waveColors[i % waveColors.length];
-      for (x = 0; x < w; x += 5) {
-        const y = noise(x / 800, 0.3 * i, nt) * 150; // Changed from 100 to 150
-        ctx.lineTo(x, y + h * 0.5);
+      for (let x = 0; x < wRef.current; x += 5) {
+        const y = noise(x / 800, 0.3 * i, nt) * 150; 
+        ctx.lineTo(x, y + hRef.current * 0.5);
       }
       ctx.stroke();
       ctx.closePath();
     }
   };
-  
 
   let animationId;
   const render = () => {
     ctx.fillStyle = "black";
     ctx.globalAlpha = waveOpacity || 0.5;
-    ctx.fillRect(0, 0, w, h);
-    drawWave(5);
+    ctx.fillRect(0, 0, wRef.current, hRef.current);
+    drawWave(2); // Reduced number of waves
     animationId = requestAnimationFrame(render);
+  };
+
+  const handleResize = () => {
+    wRef.current = window.innerWidth;
+    hRef.current = window.innerHeight;
+    ctx.canvas.width = wRef.current;
+    ctx.canvas.height = hRef.current;
+    ctx.filter = `blur(${blur}px)`;
   };
 
   useEffect(() => {
     init();
+    window.addEventListener("resize", handleResize);
     return () => {
       cancelAnimationFrame(animationId);
+      window.removeEventListener("resize", handleResize);
     };
   }, []);
 
