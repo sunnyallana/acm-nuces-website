@@ -46,7 +46,7 @@ const FacultyList = () => {
   };
 
   return (
-    <div className="flex flex-col gap-8 justify-center items-center px-4 pl-20 py-20 md:py-12">
+    <div className="flex flex-col gap-8 justify-center items-center px-4 sm:pl-20 py-20 md:py-12">
       {/* Motion heading */}
       <motion.h2
         className="text-3xl md:text-5xl lg:text-6xl text-[#006984] font-extrabold mb-2 md:mb-8 text-center"
@@ -59,13 +59,13 @@ const FacultyList = () => {
 
       {/* Motion container for the list of cards */}
       <motion.div
-        className="flex flex-col gap-y-8 md:flex-row md:gap-x-8 justify-center items-center"
+        className="flex flex-col gap-y-8 md:flex-row md:gap-x-8 justify-center items-center w-full" // Ensure it takes full width
         variants={listVariants}
         initial="hidden"
         animate="visible"
       >
         {facultyData.map((faculty, index) => (
-          <motion.div key={index} variants={listVariants}>
+          <motion.div key={index} variants={listVariants} className="w-full md:w-auto"> {/* Ensure full width on mobile */}
             <FacultyCard faculty={faculty} />
           </motion.div>
         ))}

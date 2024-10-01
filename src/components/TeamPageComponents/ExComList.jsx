@@ -40,9 +40,9 @@ const ExComList = () => {
   };
 
   return (
-    <div className="flex flex-col justify-center items-center pl-10">
+    <div className="flex flex-col justify-center items-center sm:pl-10 overflow-hidden">
       <motion.h2
-        className="text-3xl md:text-4xl lg:text-5xl text-[#006984] font-extrabold mb-2 md:mb-16 whitespace-nowrap"
+        className="text-3xl md:text-4xl lg:text-5xl text-[#006984] font-extrabold mb-2 md:mb-16 text-center"
         variants={headingVariants}
         initial="hidden"
         animate="visible"
