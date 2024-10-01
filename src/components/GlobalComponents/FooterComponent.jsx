@@ -31,8 +31,8 @@ const FooterComponent = () => {
 
   return (
     <div className="bg-gradient-to-r from-gray-100 to-gray-200">
-      <footer className="bg-repeat shadow-lg shadow-black">
-        <div className="mx-auto w-full p-4 py-6 lg:py-8 pl-20">
+      <footer className="bg-repeat shadow-lg shadow-black sm:pl-20">
+        <div className="mx-auto w-full p-4 py-6 lg:py-8">
           <div className="md:flex md:justify-between">
             <div className="mb-6 md:mb-0 ml-9">
               <a href="https://www.acmdevday.com" className="flex items-center md:flex md:justify-center">

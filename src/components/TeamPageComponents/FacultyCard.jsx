@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 const FacultyCard = ({ faculty }) => {
   return (
     <motion.div
-      className="bg-white w-full md:w-64 h-96 rounded-lg shadow-lg p-4 flex flex-col justify-between transition duration-300 ease-in-out transform hover:-translate-y-2 hover:shadow-2xl"
+      className="bg-white w-full h-96 rounded-lg shadow-lg p-4 flex flex-col justify-between transition duration-300 ease-in-out transform hover:-translate-y-2 hover:shadow-2xl md:w-64"
     >
       {/* Dots Section */}
       <div className="flex p-2 gap-1">

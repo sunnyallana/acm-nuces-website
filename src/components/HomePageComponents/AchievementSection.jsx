@@ -35,7 +35,7 @@ export function AchievementSection() {
   }, []);
 
   return (
-    <section ref={sectionRef} className='mt-10 mx-6 ml-20'>
+    <section ref={sectionRef} className='mt-10 mx-6 sm:pl-20'>
       <h2 className='text-4xl md:text-6xl text-[#006984] font-bold mb-5 text-center'>
         Our Achievements
       </h2>

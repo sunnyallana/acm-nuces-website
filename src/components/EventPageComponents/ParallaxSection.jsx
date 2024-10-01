@@ -57,7 +57,7 @@ export default function ParallaxSection() {
   };
 
   return (
-    <div className="container mx-auto px-4 py-8 pl-20">
+    <div className="container mx-auto px-4 py-8 sm:pl-20">
       <h1 className="mainh1 font-extrabold text-5xl text-center lg:text-7xl text-[#006984] pl-6 pb-8">Past Events</h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 auto-rows-[200px]">
         {events.map((event) => (

@@ -7,7 +7,7 @@ export function Mission() {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
-    <div className="max-w-5xl mx-auto py-12 pl-20">
+    <div className="max-w-5xl mx-auto py-12 pl-0 sm:pl-20">
       <div
         className="relative group block p-2 h-full w-full"
         onMouseEnter={() => setIsHovered(true)}

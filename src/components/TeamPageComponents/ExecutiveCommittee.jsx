@@ -64,8 +64,8 @@ const headingVariants = {
 
 const ExecutiveCommittee = () => {
   return (
-    <section className="ezy__team20 light py-14 md:py-24 bg-white dark:bg-[#0b1727] text-zinc-900 dark:text-white">
-      <div className="container px-4 mx-auto pl-20">
+    <section className="ezy__team20 light py-14 md:py-24 bg-white dark:bg-[#0b1727] text-zinc-900 dark:text-white overflow-hidden">
+      <div className="container px-4 mx-auto sm:pl-20 ">
         <div className="flex justify-center text-center">
           <div className="sm:max-w-lg">
             <motion.h2

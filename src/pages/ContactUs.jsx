@@ -37,7 +37,15 @@ const ContactUs = () => {
 
   return (
     <ThemeProvider theme={theme}>
-      <Box sx={{ flexGrow: 1, bgcolor: 'background.paper', minHeight: '100vh', p: 4, pl: 10 }}>
+      <Box 
+        sx={{ 
+          flexGrow: 1, 
+          bgcolor: 'background.paper', 
+          minHeight: '100vh', 
+          p: { xs: 2, sm: 4 }, // Padding for small devices
+          pl: { xs: 2, md: 10 } // Left padding for small vs. medium and larger
+        }}
+      >
         
         {/* Get in Touch Section */}
         <Paper elevation={3} sx={{ mb: 4, p: 3, backgroundColor: 'primary.main', color: 'white' }}>
