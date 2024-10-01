@@ -42,8 +42,8 @@ const ContactUs = () => {
           flexGrow: 1, 
           bgcolor: 'background.paper', 
           minHeight: '100vh', 
-          p: { xs: 2, sm: 4 }, // Padding for small devices
-          pl: { xs: 2, md: 10 } // Left padding for small vs. medium and larger
+          p: { xs: 2, sm: 4, md: 4 }, // Same padding for medium and large
+          pl: { sm: 10, md: 10 } // Left padding for small vs. medium and larger
         }}
       >
         
