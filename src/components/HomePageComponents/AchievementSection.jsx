@@ -6,10 +6,10 @@ export function AchievementSection() {
   const sectionRef = useRef(null);
 
   const achievementProps = [
-    { id: 1, count: 3000, title: "Members", description: "Active Student Participants" },
-    { id: 2, count: 20, title: "Competitions", description: "Organized annually" },
-    { id: 3, count: 15, title: "Years", description: "Of Excellence" },
-    { id: 4, count: 100, title: "Growth", description: "Year-over-year impact" },
+    { id: 1, count: "1000", title: "Members", description: "Active Student Participants" },
+    { id: 2, count: "3000", title: "Participants", description: "Organized Annually" },
+    { id: 3, count: "15", title: "Years", description: "Of Excellence" },
+    { id: 4, count: "100%", title: "Growth", description: "Year-over-Year Impact" },
   ];
 
   useEffect(() => {

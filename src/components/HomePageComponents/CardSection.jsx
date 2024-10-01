@@ -10,27 +10,27 @@ import grow2 from "../../assets/images/excellence/grow2.jpg";
 
 const cardData = [
   {
-    name: "500+ Members",
-    description: "Active Student Participants",
-    bgImage: team1,
-    afterBgImage: team2,
-  },
-  {
-    name: "20+ Competitions",
-    description: "Organized annually",
-    bgImage: comp2,
+    name: "3,000+ Participants",
+    description: "Annually",
+    bgImage: comp2, // Adjust image as necessary
     afterBgImage: comp1,
   },
   {
+    name: "20+ Competitions",
+    description: "Organized Yearly",
+    bgImage: team1, // Adjust image as necessary
+    afterBgImage: team2,
+  },
+  {
     name: "15+ Years",
-    description: "Of excellence",
+    description: "Of Excellence",
     bgImage: ex2,
     afterBgImage: ex1,
   },
   {
-    name: "100% Growth",
-    description: "Year-over-year impact",
-    bgImage: grow1,
+    name: "1,000+ Active Student Members",
+    description: "",
+    bgImage: grow1, // Adjust image as necessary
     afterBgImage: grow2,
   },
 ];

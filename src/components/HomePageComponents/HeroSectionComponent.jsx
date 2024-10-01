@@ -4,7 +4,7 @@ export default function HeroSectionComponent() {
     return (
         <WavyBackground className="flex flex-col items-center justify-center text-white p-4 pl-0  sm:p-20">
             <h1 className="text-4xl md:text-6xl font-bold mb-4 text-center">
-                Welcome to ACM NUCES
+                NUCES Khi ACM Student Chapter
             </h1>
             <p className="text-lg md:text-xl mb-6 text-center max-w-xl">
                 Join us to explore technology, enhance your skills, and connect with like-minded individuals.
