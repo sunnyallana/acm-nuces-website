@@ -69,7 +69,7 @@ const EventCard = React.memo(({ event }) => (
 
 export default function UpcomingEvents() {
   return (
-    <section className="bg-gradient-to-br from-gray-50 to-white py-20 pl-14">
+    <section className="bg-gradient-to-br from-gray-50 to-white py-20 sm:pl-14">
       <div className="container mx-auto px-6">
         <motion.h2
           className="font-extrabold text-4xl text-center lg:text-7xl text-[#006984] mb-12 relative"
