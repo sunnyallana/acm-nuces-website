@@ -83,55 +83,72 @@ const ContactUs = () => {
                 </Box>
                 <Box display="flex" alignItems="center" mb={2}>
                   <PhoneIcon color="primary" sx={{ mr: 1 }} />
-                  <Typography variant="body1">(021) 111 128 128</Typography>
+                  <Typography variant="body1">
+                    <a href="tel:+922111128128" style={{ color: 'inherit', textDecoration: 'none' }}>(021) 111 128 128</a>
+                  </Typography>
                 </Box>
                 <Box display="flex" alignItems="center">
                   <EmailIcon color="primary" sx={{ mr: 1 }} />
-                  <Typography variant="body1">info.khi@nu.edu.pk</Typography>
+                  <Typography variant="body1">
+                    <a href="mailto:info.khi@nu.edu.pk" style={{ color: 'inherit', textDecoration: 'none' }}>info.khi@nu.edu.pk</a>
+                  </Typography>
                 </Box>
               </>
             ))}
+
           </Grid>
           <Grid item xs={12} md={6}>
-            {renderCard("ACM NUCES Secretary", (
-              <>
-                <Typography variant="body1" gutterBottom><strong>Name:</strong> Neeraj Otwani</Typography>
-                <Box display="flex" alignItems="center" mb={2}>
-                  <PhoneIcon color="primary" sx={{ mr: 1 }} />
-                  <Typography variant="body1">+92 322 288 3752</Typography>
-                </Box>
-                <Box display="flex" alignItems="center">
-                  <EmailIcon color="primary" sx={{ mr: 1 }} />
-                  <Typography variant="body1">k213223@nu.edu.pk</Typography>
-                </Box>
-              </>
-            ))}
-            {renderCard("ACM NUCES President", (
+            {renderCard("President", (
               <>
                 <Typography variant="body1" gutterBottom><strong>Name:</strong> Hassaan Shahid</Typography>
                 <Box display="flex" alignItems="center" mb={2}>
                   <PhoneIcon color="primary" sx={{ mr: 1 }} />
-                  <Typography variant="body1">+92 311 248 7725</Typography>
+                  <Typography variant="body1">
+                    <a href="tel:+923112487725" style={{ color: 'inherit', textDecoration: 'none' }}>+92 311 248 7725</a>
+                  </Typography>
                 </Box>
                 <Box display="flex" alignItems="center">
                   <EmailIcon color="primary" sx={{ mr: 1 }} />
-                  <Typography variant="body1">k213177@nu.edu.pk</Typography>
+                  <Typography variant="body1">
+                    <a href="mailto:k213177@nu.edu.pk" style={{ color: 'inherit', textDecoration: 'none' }}>k213177@nu.edu.pk</a>
+                  </Typography>
                 </Box>
               </>
             ))}
-            {renderCard("ACM NUCES Vice President", (
+            {renderCard("Vice President", (
               <>
                 <Typography variant="body1" gutterBottom><strong>Name:</strong> Rahim Khan</Typography>
                 <Box display="flex" alignItems="center" mb={2}>
                   <PhoneIcon color="primary" sx={{ mr: 1 }} />
-                  <Typography variant="body1">+92 336 392 7036</Typography>
+                  <Typography variant="body1">
+                    <a href="tel:+923363927036" style={{ color: 'inherit', textDecoration: 'none' }}>+92 336 392 7036</a>
+                  </Typography>
                 </Box>
                 <Box display="flex" alignItems="center">
                   <EmailIcon color="primary" sx={{ mr: 1 }} />
-                  <Typography variant="body1">k214536@nu.edu.pk</Typography>
+                  <Typography variant="body1">
+                    <a href="mailto:k214536@nu.edu.pk" style={{ color: 'inherit', textDecoration: 'none' }}>k214536@nu.edu.pk</a>
+                  </Typography>
                 </Box>
               </>
             ))}
+            {renderCard("Director External Affairs", (
+              <>
+                <Typography variant="body1" gutterBottom><strong>Name:</strong> Neeraj Otwani</Typography>
+                <Box display="flex" alignItems="center" mb={2}>
+                  <PhoneIcon color="primary" sx={{ mr: 1 }} />
+                  <Typography variant="body1">
+                    <a href="tel:+923222883752" style={{ color: 'inherit', textDecoration: 'none' }}>+92 322 288 3752</a>
+                  </Typography>
+                </Box>
+                <Box display="flex" alignItems="center">
+                  <EmailIcon color="primary" sx={{ mr: 1 }} />
+                  <Typography variant="body1">
+                    <a href="mailto:k213223@nu.edu.pk" style={{ color: 'inherit', textDecoration: 'none' }}>k213223@nu.edu.pk</a>
+                  </Typography>
+                </Box>
+              </>
+            ))}  
           </Grid>
         </Grid>
       </Box>
