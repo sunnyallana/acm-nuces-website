@@ -1,12 +1,12 @@
 import { CardDemo } from './KeyCards';
-import team1 from "../../assets/images/excellence/team1.jpg"
-import team2 from "../../assets/images/excellence/team2.jpg"
-import comp1 from "../../assets/images/excellence/comp1.jpg"
-import comp2 from "../../assets/images/excellence/comp2.jpg"
-import ex1 from "../../assets/images/excellence/excellence1.jpg"
-import ex2 from "../../assets/images/excellence/ex2.jpg"
-import grow1 from "../../assets/images/excellence/grow1.jpg"
-import grow2 from "../../assets/images/excellence/grow2.jpg"
+import team1 from "../../assets/images/excellence/team1.jpg";
+import team2 from "../../assets/images/excellence/team2.jpg";
+import comp1 from "../../assets/images/excellence/comp1.jpg";
+import comp2 from "../../assets/images/excellence/comp2.jpg";
+import ex1 from "../../assets/images/excellence/excellence1.jpg";
+import ex2 from "../../assets/images/excellence/ex2.jpg";
+import grow1 from "../../assets/images/excellence/grow1.jpg";
+import grow2 from "../../assets/images/excellence/grow2.jpg";
 
 const cardData = [
   {
@@ -37,16 +37,18 @@ const cardData = [
 
 export function CardSection() {
   return (
-    <section className="bg-white py-12 ml-14">
-      <h1 className="mainh1 font-extrabold text-4xl text-center lg:text-left lg:text-7xl text-[#006984] pl-6">
+    <section className="bg-white py-12 mx-auto sm:ml-20">
+      <h1 className="mainh1 font-extrabold text-4xl text-center lg:text-left lg:text-7xl text-[#006984]">
         Our Excellence
       </h1>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 p-8 mx-auto">
+      {/* Grid Layout for Cards */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 py-8 mx-auto w-full sm:px-4 sm:pl-0">
         {cardData.map((card, index) => (
-          <CardDemo
-            key={index}
-            {...card}
-          />
+          <div key={index} className="w-full">
+            <CardDemo
+              {...card}
+            />
+          </div>
         ))}
       </div>
     </section>

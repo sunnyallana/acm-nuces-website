@@ -48,7 +48,7 @@ const Sponsor = () => {
   };
 
   return (
-    <div style={{ overflow: 'hidden', width: '100%' }}>
+    <div style={{ overflow: 'hidden', width: '100%' }} className="sm:pl-20 pl-0">
       <style>
         {`
           @keyframes scroll {

@@ -14,9 +14,9 @@ export function CardDemo({ name, description, bgImage, afterBgImage }) {
   };
 
   return (
-    <div className="max-w-xs w-full">
+    <div className="max-w-xs w-full mx-auto">
       <div
-        className="group w-full cursor-pointer overflow-hidden relative card h-96 rounded-md shadow-lg hover:shadow-2xl shadow-slate-500 transition-shadow duration-500 mx-auto flex flex-col justify-end p-4 border border-transparent dark:border-neutral-800"
+        className="group w-full cursor-pointer overflow-hidden relative card h-96 rounded-md shadow-lg hover:shadow-2xl shadow-slate-500 transition-shadow duration-500 flex flex-col justify-end p-4 border border-transparent dark:border-neutral-800"
         style={backgroundStyle}
       >
         {/* Hover Background */}
