@@ -67,9 +67,7 @@ const FooterComponent = () => {
           <div className="border border-gray-300 h-0.5 mt-8 mb-3"></div>
           <h2 className="text-sm text-center text-gray-600">
             © {new Date().getFullYear()}{" "}
-            <a href="https://devday23.tech/index.html" className="hover:underline text-[#031e2c]">
               ACM NUCES™
-            </a>
             . All Rights Reserved.
           </h2>
         </div>
