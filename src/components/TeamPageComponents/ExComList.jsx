@@ -70,9 +70,9 @@ import MunnazzarShahzad from '../../assets/images/team/Automation-Head-Munnazzar
 import AsfandyarKhanzada from '../../assets/images/team/Automation-Co-Head-Asfandyar-Khanzada.jpg';
 // import UmarAurangzeb from '../../assets/images/team/Automation-Co-Head-Umar-Aurangzeb.jpg';
 
-// import MuhammadAmmar from '../../assets/images/team/Training-And-Mentorship-Head-Muhammad-Ammar.jpg';
+import MuhammadAmmar from '../../assets/images/team/Training-And-Mentorship-Head-Muhammad-Ammar.jpg';
 // import MuhammadAnasKhan from '../../assets/images/team/Training-and-Mentorship-Co-Head-Muhammad-Anas-Khan.jpg';
-// import SyedAbdullahBinTariq from '../../assets/images/team/Training-And-Mentorship-Co-Head-Syed-Abdullah-Bin-Tariq.jpg';
+import SyedAbdullahBinTariq from '../../assets/images/team/Training-And-Mentorship-Co-Head-Syed-Abdullah-Bin-Tariq.jpg';
 
 // import MuhammadTalha from '../../assets/images/team/Creativity-Head-Muhammad-Talha.jpg';
 // import SyedaEizzaSakina from '../../assets/images/team/Creativity-Co-Head-Syeda-Eizza-Sakina.jpg';
@@ -212,9 +212,9 @@ const ExComList = () => {
     {
       teamName: "Training and Mentorship Team",
       members: [
-        // { imgUrl: MuhammadAmmar, title: "Head of Training and Mentorship", name: "Muhammad Ammar" },
+        { imgUrl: MuhammadAmmar, title: "Head of Training and Mentorship", name: "Muhammad Ammar" },
         // { imgUrl: MuhammadAnasKhan, title: "Co-Head of Training and Mentorship", name: "Muhammad Anas Khan" },
-        // { imgUrl: SyedAbdullahBinTariq, title: "Co-Head of Training and Mentorship", name: "Syed Abdullah Bin Tariq" },
+        { imgUrl: SyedAbdullahBinTariq, title: "Co-Head of Training and Mentorship", name: "Syed Abdullah Bin Tariq" },
       ],
     },
     {
