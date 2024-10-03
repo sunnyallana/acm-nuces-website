@@ -83,7 +83,7 @@ import MuhammadUzair from '../../assets/images/team/Virtual-Resource-Co-Head-Muh
 const ExComList = () => {
   const teamsData = [
     {
-      teamName: "Co-Operate Affairs Team",
+      teamName: "Co-operate Affairs Team",
       members: [
         { imgUrl: AbubakarBinDanish, title: "Director of Co-operate Affairs", name: "Abubakar Bin Danish" },
         { imgUrl: RahimIrfan, title: "Manager of Co-Operate Affairs", name: "Rahim Irfan" },
