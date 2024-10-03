@@ -1,39 +1,27 @@
 import React from "react";
 import { Card, CardContent, CardMedia, Typography } from "@mui/material";
 import { motion } from "framer-motion";
-import dummyPic from "../../assets/images/excom/dummy.jpg"; // Adjust the path as needed
+import HassaanGatta from "../../assets/images/excom/1-Hassaan-Gatta-President.jpg";
+import RahimKhan from "../../assets/images/excom/2-Rahim-Khan-Vice-President.jpg";
+import NeerajOtwani from "../../assets/images/excom/3-Neeraj-Otwani-Secretary.jpg";
+import FawazAhmed from "../../assets/images/excom/4-Fawaz-Ahmed-General-Secretary.jpg";
+import AimalAmir from "../../assets/images/excom/5-Aimal-Amir-Treasurer.jpg";
+import GautamKumar from "../../assets/images/excom/6-Goutam-Kumar-Event-Administrator.jpg";
+import ShaheerLuqman from "../../assets/images/excom/7-Muhammad-Shaheer-Luqman-Tech-Lead.jpg";
+import UmerKhan from "../../assets/images/excom/8-Umer-Khan-Director-Marketing.jpg";
+import TehreemAliKhan from "../../assets/images/excom/9-Tehreem-Ali-Khan-Media-and-Promotions.jpg";
 
+// Updated committee data with images
 const committeeData = [
-  {
-    name: "Hassaan Gatta",
-    designation: "President",
-    pic: dummyPic,
-  },
-  {
-    name: "Rahim Khan",
-    designation: "Vice President",
-    pic: dummyPic,
-  },
-  {
-    name: "Neeraj Otwani",
-    designation: "Secretary",
-    pic: dummyPic,
-  },
-  {
-    name: "Fawaz Ahmed",
-    designation: "General Secretary",
-    pic: dummyPic,
-  },
-  {
-    name: "Tehreem Ali",
-    designation: "Media and Promotions",
-    pic: dummyPic,
-  },
-  {
-    name: "Muhammad Shaheer",
-    designation: "Tech Lead",
-    pic: dummyPic,
-  },
+  { name: "Hassaan Gatta", designation: "President", pic: HassaanGatta },
+  { name: "Rahim Khan", designation: "Vice President", pic: RahimKhan },
+  { name: "Neeraj Otwani", designation: "Secretary", pic: NeerajOtwani },
+  { name: "Fawaz Ahmed", designation: "General Secretary", pic: FawazAhmed },
+  { name: "Aimal Amir", designation: "Treasurer", pic: AimalAmir },
+  { name: "Gautam Kumar", designation: "Event Administrator", pic: GautamKumar },
+  { name: "Muhammad Shaheer", designation: "Tech Lead", pic: ShaheerLuqman },
+  { name: "Umer Khan", designation: "Director Marketing", pic: UmerKhan },
+  { name: "Tehreem Ali", designation: "Media and Promotions", pic: TehreemAliKhan },
 ];
 
 // Animation variants
@@ -80,7 +68,7 @@ const ExecutiveCommittee = () => {
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center">
           {committeeData.map((member, index) => (
-            <motion.div key={index} variants={variants} whileHover={{ scale: 1.015 }} className="w-72"> {/* Increased width to w-72 */}
+            <motion.div key={index} variants={variants} whileHover={{ scale: 1.015 }} className="w-72">
               <Card sx={{ backgroundColor: 'white', borderRadius: '16px', boxShadow: 3 }}>
                 <CardMedia
                   component="img"
