@@ -71,7 +71,7 @@ import AsfandyarKhanzada from '../../assets/images/team/Automation-Co-Head-Asfan
 import UmarAurangzeb from '../../assets/images/team/Automation-Co-Head-Umar-Aurangzeb.jpg';
 
 import MuhammadAmmar from '../../assets/images/team/Training-And-Mentorship-Head-Muhammad-Ammar.jpg';
-import MuhammadAnasKhan from '../../assets/images/team/Training-and-Mentorship-Co-Head-Muhammad-Anas-Khan.jpg';
+import MuhammadAnasKhan from '../../assets/images/team/Training-And-Mentorship-Co-Head-Muhammad-Anas-khan.jpg';
 import SyedAbdullahBinTariq from '../../assets/images/team/Training-And-Mentorship-Co-Head-Syed-Abdullah-Bin-Tariq.jpg';
 
 import MuhammadTalha from '../../assets/images/team/Creativity-Head-Muhammad-Talha.jpg';
@@ -83,6 +83,20 @@ import MuhammadUzair from '../../assets/images/team/Virtual-Resource-Co-Head-Muh
 const ExComList = () => {
   const teamsData = [
     {
+      teamName: "Co-Operate Affairs Team",
+      members: [
+        { imgUrl: AbubakarBinDanish, title: "Director of Co-operate Affairs", name: "Abubakar Bin Danish" },
+        { imgUrl: RahimIrfan, title: "Manager of Co-Operate Affairs", name: "Rahim Irfan" },
+      ],
+    },
+    {
+      teamName: "Technology Team",
+      members: [
+        { imgUrl: AhadAzizJaffer, title: "Co-Lead of Technology", name: "Ahad Aziz Jaffer" },
+        { imgUrl: SyedaSamahaBatoolRizvi, title: "Co-Lead of Technology", name: "Syeda Samaha Batool Rizvi" },
+      ],
+    },
+    {
       teamName: "Web Development Team",
       members: [
         { imgUrl: SunnyShabanAli, title: "Head of Frontend", name: "Sunny Shaban Ali" },
@@ -91,13 +105,6 @@ const ExComList = () => {
         { imgUrl: SameerAhmed, title: "Head of Backend", name: "Sameer Ahmed" },
         { imgUrl: SahilLatif, title: "Co-Head of Backend", name: "Sahil Latif" },
         { imgUrl: ShahmeerIrfan, title: "Co-Head of Backend", name: "Shahmeer Irfan" },
-      ],
-    },
-    {
-      teamName: "Technology Team",
-      members: [
-        { imgUrl: AhadAzizJaffer, title: "Co-Lead of Technology", name: "Ahad Aziz Jaffer" },
-        { imgUrl: SyedaSamahaBatoolRizvi, title: "Co-Lead of Technology", name: "Syeda Samaha Batool Rizvi" },
       ],
     },
     {
@@ -135,13 +142,6 @@ const ExComList = () => {
         { imgUrl: FabihaAyela, title: "Co-Head of Guest Relations", name: "Fabiha Ayela" },
         { imgUrl: RameelaHassan, title: "Co-Head of Guest Relations", name: "Rameela Hassan" },
         { imgUrl: DaniyalHussain, title: "Co-Head of Guest Relations", name: "Daniyal Hussain" },
-      ],
-    },
-    {
-      teamName: "Co-Operate Affairs Team",
-      members: [
-        { imgUrl: AbubakarBinDanish, title: "Director of Co-operate Affairs", name: "Abubakar Bin Danish" },
-        { imgUrl: RahimIrfan, title: "Manager of Co-Operate Affairs", name: "Rahim Irfan" },
       ],
     },
     {
