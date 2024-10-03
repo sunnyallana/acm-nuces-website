@@ -10,14 +10,16 @@ const Navbar2 = () => {
   const handleScroll = () => {
     if (typeof window !== "undefined") {
       if (window.scrollY > lastScrollY) {
-        
         setIsVisible(false);
       } else {
-        
         setIsVisible(true);
       }
       setLastScrollY(window.scrollY);
     }
+  };
+
+  const handleClick = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   useEffect(() => {
@@ -29,14 +31,12 @@ const Navbar2 = () => {
 
   return (
     <nav
-      className={`fixed bottom-0 left-0 right-0 mx-auto bg-white border-t border-gray-300 shadow-xl z-50 mb-4 w-[90%] sm:w-[30%] rounded-full px-3 sm:hidden transition-transform duration-300 ease-in-out ${
-        isVisible ? "translate-y-0" : "translate-y-full"
-      }`}
+      className={`fixed bottom-0 left-0 right-0 mx-auto bg-white border-t border-gray-300 shadow-xl z-50 mb-4 w-[90%] sm:w-[30%] rounded-full px-3 sm:hidden transition-transform duration-300 ease-in-out ${isVisible ? "translate-y-0" : "translate-y-full"}`}
     >
       <div className="flex justify-between items-center w-full">
         {/* Home Link */}
         <div className="group relative cursor-pointer">
-          <Link to="/" className="flex h-10 w-10 items-center justify-center text-gray-500 hover:text-blue-500">
+          <Link to="/" onClick={handleClick} className="flex h-10 w-10 items-center justify-center text-gray-500 hover:text-blue-500">
             <HiOutlineHome size={28} />
           </Link>
           <span className="absolute -top-8 left-[50%] -translate-x-[50%] z-20 origin-left scale-0 rounded-lg border border-gray-300 bg-white px-3 py-2 text-sm font-medium shadow-md transition-all duration-300 ease-in-out group-hover:scale-100">
@@ -46,7 +46,7 @@ const Navbar2 = () => {
 
         {/* Events Link */}
         <div className="group relative cursor-pointer">
-          <Link to="/events" className="flex h-10 w-10 items-center justify-center text-gray-500 hover:text-blue-500">
+          <Link to="/events" onClick={handleClick} className="flex h-10 w-10 items-center justify-center text-gray-500 hover:text-blue-500">
             <HiOutlineCalendar size={28} />
           </Link>
           <span className="absolute -top-8 left-[50%] -translate-x-[50%] z-20 origin-left scale-0 rounded-lg border border-gray-300 bg-white px-3 py-2 text-sm font-medium shadow-md transition-all duration-300 ease-in-out group-hover:scale-100">
@@ -61,7 +61,7 @@ const Navbar2 = () => {
 
         {/* Team Link */}
         <div className="group relative cursor-pointer">
-          <Link to="/our-team" className="flex h-10 w-10 items-center justify-center text-gray-500 hover:text-blue-500">
+          <Link to="/our-team" onClick={handleClick} className="flex h-10 w-10 items-center justify-center text-gray-500 hover:text-blue-500">
             <HiOutlineUsers size={28} />
           </Link>
           <span className="absolute -top-8 left-[50%] -translate-x-[50%] z-20 origin-left scale-0 rounded-lg border border-gray-300 bg-white px-3 py-2 text-sm font-medium shadow-md transition-all duration-300 ease-in-out group-hover:scale-100">
@@ -71,7 +71,7 @@ const Navbar2 = () => {
 
         {/* Contact Us Link */}
         <div className="group relative cursor-pointer">
-          <Link to="/contact-us" className="flex h-10 w-10 items-center justify-center text-gray-500 hover:text-blue-500">
+          <Link to="/contact-us" onClick={handleClick} className="flex h-10 w-10 items-center justify-center text-gray-500 hover:text-blue-500">
             <HiOutlinePhone size={28} />
           </Link>
           <span className="absolute -top-8 left-[50%] -translate-x-[50%] z-20 origin-left scale-0 rounded-lg border border-gray-300 bg-white px-3 py-2 text-sm font-medium shadow-md transition-all duration-300 ease-in-out group-hover:scale-100">
