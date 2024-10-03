@@ -25,7 +25,7 @@ import ShoaibRaza from '../../assets/images/team/Public-Relations-Co-Head-Shoaib
 import TahaAlam from '../../assets/images/team/Public-Relations-Co-Head-Taha-Alam.jpg';
 
 import AbubakarBinDanish from '../../assets/images/team/Co-operate-Affairs-Director-Abubakar-Bin-Danish.jpg';
-import RahimIrfan from '../../assets/images/team/Co-Operate-Affairs-Manager-Rahim-Irfan.jpg';
+import RahimIrfan from '../../assets/images/team/Co-operate-Affairs-Manager-Rahim-Irfan.jpg';
 
 import MurtazaHussain from '../../assets/images/team/Security-Head-Murtaza-Hussain.jpg';
 import MuhammadSaudImran from '../../assets/images/team/Security-Co-head-Muhammad-Saud-Imran.jpg';
