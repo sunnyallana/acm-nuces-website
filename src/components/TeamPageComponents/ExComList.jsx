@@ -123,7 +123,7 @@ const ExComList = () => {
       members: [
         { imgUrl: IjlalIqbal, title: "Head of Public Relations", name: "Ijlal Iqbal" },
         { imgUrl: MuhammadShaheer, title: "Co-Head of Public Relations", name: "Muhammad Shaheer" },
-        { imgUrl: SohaibRafay, title: "Co-Head of Public Relations", name: "Sohaib Rafay" },
+        { imgUrl: SohaibRafay, title: "Co-Head of Public Relations", name: "Muhammad Sohaib" },
         { imgUrl: ShoaibRaza, title: "Co-Head of Public Relations", name: "Shoaib Raza" },
         { imgUrl: TahaAlam, title: "Co-Head of Public Relations", name: "Taha Alam" },
       ],
