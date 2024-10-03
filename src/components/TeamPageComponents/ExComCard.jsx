@@ -5,9 +5,9 @@ const ExComCard = ({ imgUrl, title, name }) => {
     <div
       className={`
         relative mt-10 mb-10 bg-white
-        min-h-[160px] w-[160px]
-        md:h-[300px] md:w-[300px]
-        lg:h-[325px] lg:w-[325px]
+        min-h-[160px] w-[250px]  // Increased base width
+        md:h-[300px] md:w-[400px] // Increased medium width
+        lg:h-[325px] lg:w-[450px]  // Increased large width
         p-4 md:p-6 lg:p-8
         rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105
       `}
@@ -36,6 +36,7 @@ const ExComCard = ({ imgUrl, title, name }) => {
           className={`
             text-lg md:text-3xl font-bold
             transition-colors duration-300 group-hover:text-yellow-300
+            whitespace-nowrap // Prevent text wrapping
           `}
         >
           {name}
@@ -44,6 +45,7 @@ const ExComCard = ({ imgUrl, title, name }) => {
           className={`
             text-sm md:text-lg font-normal
             transition-colors duration-300 group-hover:text-yellow-200
+            whitespace-nowrap // Prevent text wrapping
           `}
         >
           {title}
