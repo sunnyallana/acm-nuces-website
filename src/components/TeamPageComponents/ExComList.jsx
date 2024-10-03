@@ -25,14 +25,14 @@ import ShoaibRaza from '../../assets/images/team/Public-Relations-Co-Head-Shoaib
 import TahaAlam from '../../assets/images/team/Public-Relations-Co-Head-Taha-Alam.jpg';
 
 import AbubakarBinDanish from '../../assets/images/team/Co-operate-Affairs-Director-Abubakar-Bin-Danish.jpg';
-// import RahimIrfan from '../../assets/images/team/Co-Operate-Affairs-Manager-Rahim-Irfan.jpg';
+import RahimIrfan from '../../assets/images/team/Co-Operate-Affairs-Manager-Rahim-Irfan.jpg';
 
 import MurtazaHussain from '../../assets/images/team/Security-Head-Murtaza-Hussain.jpg';
 import MuhammadSaudImran from '../../assets/images/team/Security-Co-head-Muhammad-Saud-Imran.jpg';
 import MuhammadHasnain from '../../assets/images/team/Security-Co-head-Muhammad-Hasnain.jpg';
 
 import AhadAzizJaffer from '../../assets/images/team/Technology-Co-Lead-Ahad-Aziz-Jaffer.jpg';
-// import SyedaSamahaBatoolRizvi from '../../assets/images/team/Technology-Co-Lead-Syeda-Samaha-Batool-Rizvi.jpg';
+import SyedaSamahaBatoolRizvi from '../../assets/images/team/Technology-Co-Lead-Syeda-Samaha-Batool-Rizvi.jpg';
 
 import SameerRajani from '../../assets/images/team/Animations-Head-Sameer-Rajani.jpg';
 import AfaqAhmedSoomro from '../../assets/images/team/Animations-Co-head-Afaq-Ahmed-Soomro.jpg';
@@ -57,7 +57,7 @@ import TaqwaRasheed from '../../assets/images/team/Design-Co-Head-Taqwa-Rasheed.
 import SyedTahaZaidi from '../../assets/images/team/Design-Executive-Head-Syed-Taha-Zaidi.jpg';
 
 import FarheenFatima from '../../assets/images/team/Content-Head-Farheen-Fatima.jpg';
-// import MuhammadAhzamWaheed from '../../assets/images/team/Content-Co-Head-Muhammad-Ahzam-Waheed.jpg';
+import MuhammadAhzamWaheed from '../../assets/images/team/Content-Co-Head-Muhammad-Ahzam-Waheed.jpg';
 import KousarSaeed from '../../assets/images/team/Content-Co-Head-Kousar-Saeed.jpg';
 
 import WaniaFatima from '../../assets/images/team/Media-Manager-Wania-Fatima.jpg';
@@ -68,17 +68,17 @@ import MujtabaKamran from '../../assets/images/team/Media-Assistant-Co-Head-Mujt
 
 import MunnazzarShahzad from '../../assets/images/team/Automation-Head-Munnazzar-Shahzad.jpg';
 import AsfandyarKhanzada from '../../assets/images/team/Automation-Co-Head-Asfandyar-Khanzada.jpg';
-// import UmarAurangzeb from '../../assets/images/team/Automation-Co-Head-Umar-Aurangzeb.jpg';
+import UmarAurangzeb from '../../assets/images/team/Automation-Co-Head-Umar-Aurangzeb.jpg';
 
 import MuhammadAmmar from '../../assets/images/team/Training-And-Mentorship-Head-Muhammad-Ammar.jpg';
-// import MuhammadAnasKhan from '../../assets/images/team/Training-and-Mentorship-Co-Head-Muhammad-Anas-Khan.jpg';
+import MuhammadAnasKhan from '../../assets/images/team/Training-and-Mentorship-Co-Head-Muhammad-Anas-Khan.jpg';
 import SyedAbdullahBinTariq from '../../assets/images/team/Training-And-Mentorship-Co-Head-Syed-Abdullah-Bin-Tariq.jpg';
 
-// import MuhammadTalha from '../../assets/images/team/Creativity-Head-Muhammad-Talha.jpg';
-// import SyedaEizzaSakina from '../../assets/images/team/Creativity-Co-Head-Syeda-Eizza-Sakina.jpg';
+import MuhammadTalha from '../../assets/images/team/Creativity-Head-Muhammad-Talha.jpg';
+import SyedaEizzaSakina from '../../assets/images/team/Creativity-Co-Head-Syeda-Eizza-Sakina.jpg';
 
-// import ShaheerUlIslam from '../../assets/images/team/Virtual-Resource-Head-Shaheer-Ul-Islam.jpg';
-// import MuhammadUzair from '../../assets/images/team/Virtual-Resource-Co-Head-Muhammad-Uzair.jpg';
+import ShaheerUlIslam from '../../assets/images/team/Virtual-Resource-Head-Shaheer-Ul-Islam.jpg';
+import MuhammadUzair from '../../assets/images/team/Virtual-Resource-Co-Head-Muhammad-Uzair.jpg';
 
 const ExComList = () => {
   const teamsData = [
@@ -91,6 +91,13 @@ const ExComList = () => {
         { imgUrl: SameerAhmed, title: "Head of Backend", name: "Sameer Ahmed" },
         { imgUrl: SahilLatif, title: "Co-Head of Backend", name: "Sahil Latif" },
         { imgUrl: ShahmeerIrfan, title: "Co-Head of Backend", name: "Shahmeer Irfan" },
+      ],
+    },
+    {
+      teamName: "Technology Team",
+      members: [
+        { imgUrl: AhadAzizJaffer, title: "Co-Lead of Technology", name: "Ahad Aziz Jaffer" },
+        { imgUrl: SyedaSamahaBatoolRizvi, title: "Co-Lead of Technology", name: "Syeda Samaha Batool Rizvi" },
       ],
     },
     {
@@ -134,7 +141,7 @@ const ExComList = () => {
       teamName: "Co-Operate Affairs Team",
       members: [
         { imgUrl: AbubakarBinDanish, title: "Director of Co-operate Affairs", name: "Abubakar Bin Danish" },
-        // { imgUrl: RahimIrfan, title: "Manager of Co-Operate Affairs", name: "Rahim Irfan" },
+        { imgUrl: RahimIrfan, title: "Manager of Co-Operate Affairs", name: "Rahim Irfan" },
       ],
     },
     {
@@ -143,13 +150,6 @@ const ExComList = () => {
         { imgUrl: MurtazaHussain, title: "Head of Security", name: "Murtaza Hussain" },
         { imgUrl: MuhammadSaudImran, title: "Co-Head of Security", name: "Muhammad Saud Imran" },
         { imgUrl: MuhammadHasnain, title: "Co-Head of Security", name: "Muhammad Hasnain" },
-      ],
-    },
-    {
-      teamName: "Technology Team",
-      members: [
-        { imgUrl: AhadAzizJaffer, title: "Co-Lead of Technology", name: "Ahad Aziz Jaffer" },
-        // { imgUrl: SyedaSamahaBatoolRizvi, title: "Co-Lead of Technology", name: "Syeda Samaha Batool Rizvi" },
       ],
     },
     {
@@ -189,7 +189,7 @@ const ExComList = () => {
       teamName: "Content Team",
       members: [
         { imgUrl: FarheenFatima, title: "Head of Content", name: "Farheen Fatima" },
-        // { imgUrl: MuhammadAhzamWaheed, title: "Co-Head of Content", name: "Muhammad Ahzam Waheed" },
+        { imgUrl: MuhammadAhzamWaheed, title: "Co-Head of Content", name: "Muhammad Ahzam Waheed" },
         { imgUrl: KousarSaeed, title: "Co-Head of Content", name: "Kousar Saeed" },
       ],
     },
@@ -208,29 +208,29 @@ const ExComList = () => {
       members: [
         { imgUrl: MunnazzarShahzad, title: "Head of Automation", name: "Munnazzar Shahzad" },
         { imgUrl: AsfandyarKhanzada, title: "Co-Head of Automation", name: "Asfandyar Khanzada" },
-        // { imgUrl: UmarAurangzeb, title: "Co-Head of Automation", name: "Umar Aurangzeb" },
+        { imgUrl: UmarAurangzeb, title: "Co-Head of Automation", name: "Umar Aurangzeb" },
       ],
     },
     {
       teamName: "Training and Mentorship Team",
       members: [
         { imgUrl: MuhammadAmmar, title: "Head of Training and Mentorship", name: "Muhammad Ammar" },
-        // { imgUrl: MuhammadAnasKhan, title: "Co-Head of Training and Mentorship", name: "Muhammad Anas Khan" },
+        { imgUrl: MuhammadAnasKhan, title: "Co-Head of Training and Mentorship", name: "Muhammad Anas Khan" },
         { imgUrl: SyedAbdullahBinTariq, title: "Co-Head of Training and Mentorship", name: "Syed Abdullah Bin Tariq" },
       ],
     },
     {
       teamName: "Creativity Team",
       members: [
-        // { imgUrl: MuhammadTalha, title: "Head of Creativity", name: "Muhammad Talha" },
-        // { imgUrl: SyedaEizzaSakina, title: "Co-Head of Creativity", name: "Syeda Eizza Sakina" },
+        { imgUrl: MuhammadTalha, title: "Head of Creativity", name: "Muhammad Talha" },
+        { imgUrl: SyedaEizzaSakina, title: "Co-Head of Creativity", name: "Syeda Eizza Sakina" },
       ],
     },
     {
       teamName: "Virtual Resource Team",
       members: [
-        // { imgUrl: ShaheerUlIslam, title: "Head of Virtual Resource", name: "Shaheer Ul Islam" },
-        // { imgUrl: MuhammadUzair, title: "Co-Head of Virtual Resource", name: "Muhammad Uzair" },
+        { imgUrl: ShaheerUlIslam, title: "Head of Virtual Resource", name: "Shaheer Ul Islam" },
+        { imgUrl: MuhammadUzair, title: "Co-Head of Virtual Resource", name: "Muhammad Uzair" },
       ],
     },
   ];
