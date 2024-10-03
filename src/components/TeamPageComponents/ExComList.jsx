@@ -86,11 +86,32 @@ const ExComList = () => {
       teamName: "Web Development Team",
       members: [
         { imgUrl: SunnyShabanAli, title: "Head of Frontend", name: "Sunny Shaban Ali" },
-        { imgUrl: AliNazir, title: "Co-Head of Frontend", name: "Ali Nazir" },
         { imgUrl: MuhammadOwais, title: "Co-Head of Frontend", name: "Muhammad Owais" },
+        { imgUrl: AliNazir, title: "Co-Head of Frontend", name: "Ali Nazir" },
         { imgUrl: SameerAhmed, title: "Head of Backend", name: "Sameer Ahmed" },
         { imgUrl: SahilLatif, title: "Co-Head of Backend", name: "Sahil Latif" },
         { imgUrl: ShahmeerIrfan, title: "Co-Head of Backend", name: "Shahmeer Irfan" },
+      ],
+    },
+    {
+      teamName: "Event Management Team",
+      members: [
+        { imgUrl: AbdulRafayKalim, title: "Head of Event Management", name: "Abdul Rafay Kalim" },
+        { imgUrl: MariumShahid, title: "Co-Head of Event Management", name: "Marium Shahid" },
+        { imgUrl: MuhammadHuzaifa, title: "Co-Head of Event Management", name: "Muhammad Huzaifa" },
+        { imgUrl: AbdullahBinMasood, title: "Co-Head of Event Management", name: "Abdullah Bin Masood" },
+        { imgUrl: DaniyalAli, title: "Co-Head of Event Management", name: "Daniyal Ali" },
+      ],
+    },
+    
+    {
+      teamName: "Public Relations Team",
+      members: [
+        { imgUrl: IjlalIqbal, title: "Head of Public Relations", name: "Ijlal Iqbal" },
+        { imgUrl: MuhammadShaheer, title: "Co-Head of Public Relations", name: "Muhammad Shaheer" },
+        { imgUrl: SohaibRafay, title: "Co-Head of Public Relations", name: "Sohaib Rafay" },
+        { imgUrl: ShoaibRaza, title: "Co-Head of Public Relations", name: "Shoaib Raza" },
+        { imgUrl: TahaAlam, title: "Co-Head of Public Relations", name: "Taha Alam" },
       ],
     },
     {
@@ -107,16 +128,6 @@ const ExComList = () => {
         { imgUrl: FabihaAyela, title: "Co-Head of Guest Relations", name: "Fabiha Ayela" },
         { imgUrl: RameelaHassan, title: "Co-Head of Guest Relations", name: "Rameela Hassan" },
         { imgUrl: DaniyalHussain, title: "Co-Head of Guest Relations", name: "Daniyal Hussain" },
-      ],
-    },
-    {
-      teamName: "Public Relations Team",
-      members: [
-        { imgUrl: IjlalIqbal, title: "Head of Public Relations", name: "Ijlal Iqbal" },
-        { imgUrl: MuhammadShaheer, title: "Co-Head of Public Relations", name: "Muhammad Shaheer" },
-        { imgUrl: SohaibRafay, title: "Co-Head of Public Relations", name: "Sohaib Rafay" },
-        { imgUrl: ShoaibRaza, title: "Co-Head of Public Relations", name: "Shoaib Raza" },
-        { imgUrl: TahaAlam, title: "Co-Head of Public Relations", name: "Taha Alam" },
       ],
     },
     {
@@ -164,16 +175,7 @@ const ExComList = () => {
         { imgUrl: SyedMuhammadShazanRizvi, title: "Co-Head of Promotions", name: "Syed Muhammad Shazan Rizvi" },
       ],
     },
-    {
-      teamName: "Event Management Team",
-      members: [
-        { imgUrl: AbdulRafayKalim, title: "Head of Event Management", name: "Abdul Rafay Kalim" },
-        { imgUrl: MariumShahid, title: "Co-Head of Event Management", name: "Marium Shahid" },
-        { imgUrl: MuhammadHuzaifa, title: "Co-Head of Event Management", name: "Muhammad Huzaifa" },
-        { imgUrl: AbdullahBinMasood, title: "Co-Head of Event Management", name: "Abdullah Bin Masood" },
-        { imgUrl: DaniyalAli, title: "Co-Head of Event Management", name: "Daniyal Ali" },
-      ],
-    },
+    
     {
       teamName: "Design Team",
       members: [
