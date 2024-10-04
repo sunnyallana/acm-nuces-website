@@ -20,7 +20,7 @@ const committeeData = [
   { name: "Aimal Amir", designation: "Treasurer", pic: AimalAmir },
   { name: "Gautam Kumar", designation: "Event Administrator", pic: GautamKumar },
   { name: "Muhammad Shaheer", designation: "Tech Lead", pic: ShaheerLuqman },
-  { name: "Umer Khan", designation: "Director Marketing", pic: UmerKhan },
+  { name: "Umer Ali", designation: "Director Marketing", pic: UmerKhan },
   { name: "Tehreem Ali", designation: "Media and Promotions", pic: TehreemAliKhan },
 ];
 
