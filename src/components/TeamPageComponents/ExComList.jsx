@@ -80,6 +80,10 @@ import SyedaEizzaSakina from '../../assets/images/team/Creativity-Co-Head-Syeda-
 import ShaheerUlIslam from '../../assets/images/team/Virtual-Resource-Head-Shaheer-Ul-Islam.jpg';
 import MuhammadUzair from '../../assets/images/team/Virtual-Resource-Co-Head-Muhammad-Uzair.jpg';
 
+import AbdulRehman from '../../assets/images/team/Virtual-Resource-Co-Head-Abdul-Rehman.jpg';
+import WarunKumar from '../../assets/images/team/Virtual-Resource-Co-Head-Warun-Kumar.jpg';
+
+
 const ExComList = () => {
   const teamsData = [
     {
@@ -115,6 +119,13 @@ const ExComList = () => {
         { imgUrl: MuhammadHuzaifa, title: "Co-Head of Event Management", name: "Muhammad Huzaifa" },
         { imgUrl: AbdullahBinMasood, title: "Co-Head of Event Management", name: "Abdullah Bin Masood" },
         { imgUrl: DaniyalAli, title: "Co-Head of Event Management", name: "Daniyal Ali" },
+      ],
+    },
+    {
+      teamName: "Event Administration Team",
+      members: [
+        { imgUrl: AbdulRehman, title: "Co-Head of Event Administration", name: "Abdul Rehman" },
+        { imgUrl: WarunKumar, title: "Co-Head of Event Administration", name: "Warun Kumar" },
       ],
     },
     
