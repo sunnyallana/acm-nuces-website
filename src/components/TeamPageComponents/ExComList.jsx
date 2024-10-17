@@ -80,8 +80,8 @@ import SyedaEizzaSakina from '../../assets/images/team/Creativity-Co-Head-Syeda-
 import ShaheerUlIslam from '../../assets/images/team/Virtual-Resource-Head-Shaheer-Ul-Islam.jpg';
 import MuhammadUzair from '../../assets/images/team/Virtual-Resource-Co-Head-Muhammad-Uzair.jpg';
 
-import AbdulRehman from '../../assets/images/team/Virtual-Resource-Co-Head-Abdul-Rehman.jpg';
-import WarunKumar from '../../assets/images/team/Virtual-Resource-Co-Head-Warun-Kumar.jpg';
+import AbdulRehman from '../../assets/images/team/Event-Administration-Co-Head-Abdul-Rehman.jpg';
+import WarunKumar from '../../assets/images/team/Event-Administration-Co-Head-Warun-Kumar.jpg';
 
 
 const ExComList = () => {
