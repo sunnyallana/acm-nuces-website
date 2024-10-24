@@ -9,7 +9,6 @@ const Container = styled.div`
   position: fixed;
   z-index: 999;
   height: 100vh; /* Full screen height to allow vertical centering */
-  width: 100%; /* Ensure the navbar container takes full width */
   display: flex; /* Flexbox to align content */
   align-items: center; /* Vertically center the content */
   @media (max-width: 640px) { /* Tailwind sm breakpoint */
@@ -107,7 +106,7 @@ const Text = styled.span`
 
 const NavBarComponent = () => {
   const handleLinkClick = () => {
-    window.scrollTo(0, 0); // Scroll to top when a link is clicked
+    window.scrollTo(0, 0);
   };
 
   return (

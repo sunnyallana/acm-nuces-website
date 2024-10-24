@@ -13,7 +13,7 @@ const events = [
     location: "Fast NUCES, Karachi",
     attendees: 2000,
     logo: Logo1,
-    registrationLink: "https://www.acmcoderscup.online/"
+    registrationLink: "https://coderscup.acmnuceskhi.com/"
   },
   {
     id: 2,

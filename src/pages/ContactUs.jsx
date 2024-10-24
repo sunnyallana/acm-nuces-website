@@ -20,7 +20,7 @@ import EmailIcon from '@mui/icons-material/Email';
 const theme = createTheme({
   palette: {
     primary: {
-      main: '#257fb4', // Updated color
+      main: '#006b83',
     },
   },
 });
