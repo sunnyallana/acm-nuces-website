@@ -4,7 +4,7 @@ import { FaInstagram, FaLinkedin, FaFacebook } from "react-icons/fa";
 
 const FooterComponent = () => {
   const events = [
-    { name: "Coders Cup", link: "https://www.acmcoderscup.online/" },
+    { name: "Coders Cup", link: "https://coderscup.acmnuceskhi.com/" },
     { name: "ACM Developers Day", link: "https://www.acmdevday.com/" },
   ];
 
